@@ -1,0 +1,99 @@
+{
+  "request_id": "demo-001",
+  "status": "optimal",
+  "solver": "exact",
+  "ordered_attraction_ids": [
+    "P0003",
+    "P0008",
+    "P0001"
+  ],
+  "ordered_attraction_names": [
+    "Shibuya Scramble Crossing",
+    "Kabukicho / Shinjuku Entertainment District",
+    "Ueno Zoological Gardens"
+  ],
+  "legs": [
+    {
+      "from": "__start__",
+      "to": "P0003",
+      "from_station_id": "G16",
+      "to_station_id": "Z01",
+      "walk_time_min": 1.08,
+      "metro_time_min": 55.9,
+      "wait_time_min": 2.14,
+      "transfer_count": 4,
+      "fare_yen": 296,
+      "crowd_score": 0.0,
+      "rain_penalty_min": 3.03,
+      "outdoor_penalty_min": 0.0,
+      "total_leg_time_min": 62.15,
+      "route_path": "G16→G15→E09→E08→E07→M11→M10→M09→F13→F14→F15→F16→Z01"
+    },
+    {
+      "from": "P0003",
+      "to": "P0008",
+      "from_station_id": "Z01",
+      "to_station_id": "M08",
+      "walk_time_min": 5.83,
+      "metro_time_min": 21.8,
+      "wait_time_min": 2.14,
+      "transfer_count": 2,
+      "fare_yen": 178,
+      "crowd_score": 0.0,
+      "rain_penalty_min": 16.39,
+      "outdoor_penalty_min": 0.0,
+      "total_leg_time_min": 46.16,
+      "route_path": "Z01→F16→F15→F14→F13→M09→M08"
+    },
+    {
+      "from": "P0008",
+      "to": "P0001",
+      "from_station_id": "M08",
+      "to_station_id": "G16",
+      "walk_time_min": 14.4,
+      "metro_time_min": 24.9,
+      "wait_time_min": 2.5,
+      "transfer_count": 2,
+      "fare_yen": 296,
+      "crowd_score": 0.0,
+      "rain_penalty_min": 40.5,
+      "outdoor_penalty_min": 15.0,
+      "total_leg_time_min": 97.3,
+      "route_path": "M08→M09→M10→M11→E07→E08→E09→G15→G16"
+    },
+    {
+      "from": "P0001",
+      "to": "__end__",
+      "from_station_id": "G16",
+      "to_station_id": "G16",
+      "walk_time_min": 9.65,
+      "metro_time_min": 0.0,
+      "wait_time_min": 2.14,
+      "transfer_count": 0,
+      "fare_yen": 0,
+      "crowd_score": 0.0,
+      "rain_penalty_min": 27.14,
+      "outdoor_penalty_min": 0.0,
+      "total_leg_time_min": 38.93,
+      "route_path": "G16 (same station)"
+    }
+  ],
+  "totals": {
+    "travel_time_min": 244.54,
+    "stay_time_min": 210,
+    "total_time_min": 454.54,
+    "total_fare_yen": 770,
+    "objective_cost": 319.8
+  },
+  "constraints": {
+    "time_budget_min": 540,
+    "budget_yen": 2500,
+    "binding": [],
+    "feasible": true
+  },
+  "meta": {
+    "day_type": "holiday",
+    "time_slot_used": "09:00",
+    "trip_date": "2024-06-15"
+  }
+}

@@ -1,0 +1,802 @@
+﻿attraction_id,attraction_name,nearest_station_id,nearest_station_name,distance_to_station_m,access_walk_time_min,pressure_score
+P0001,Ueno Zoological Gardens,G16,Ueno,441.1,7.3517,0.91079
+P0002,National Museum of Nature and Science,G16,Ueno,470.4,7.84,0.796609
+P0003,Shibuya Scramble Crossing,Z01,Shibuya,49.2,0.82,0.79153
+P0004,teamLab Planets TOKYO,Y22,Toyosu,855.9,14.265,0.787602
+P0005,Tokyo National Museum,G16,Ueno,804.2,13.4033,0.761058
+P0006,Tokyo Metropolitan Ueno Park,G16,Ueno,441.1,7.3517,0.753808
+P0007,Shibuya Sky,F16,Shibuya,93.9,1.565,0.730684
+P0008,Kabukicho / Shinjuku Entertainment District,M08,Shinjuku,217.2,3.62,0.72929
+P0009,Ameyoko Shopping Street,G16,Ueno,220.3,3.6717,0.727184
+P0010,Kabuki-za Theatre / Higashi-Ginza,H10,HigashiGinza,66.1,1.1017,0.726242
+P0011,Tokyo Tower,H05,Kamiyacho,456.2,7.6033,0.724628
+P0012,Omotesando / Aoyama Shopping District,F15,MeijiJingumae,275.2,4.5867,0.722915
+P0013,Akihabara Electric Town,G14,Suehirocho,249.1,4.1517,0.722721
+P0014,Tsukiji Hongwanji Temple,H11,Tsukiji,180.2,3.0033,0.721095
+P0015,Art Aquarium Museum GINZA,G09,Ginza,33.6,0.56,0.715604
+P0016,Meiji Shrine (Meiji Jingu),C03,MeijiJingumae,587.6,9.7933,0.714406
+P0017,Hibiya Park,C09,Hibiya,235.4,3.9233,0.714174
+P0018,Senso-ji / Kaminarimon,G19,Asakusa,343.1,5.7183,0.709748
+P0019,Kokyo Gaien National Garden / Imperial Palace Plaza,C10,Nijubashimae,351.1,5.8517,0.706834
+P0020,Tokyo International Forum / Marunouchi,Y18,Yurakucho,211.0,3.5167,0.701546
+P0021,Sunshine Aquarium,Y10,HigashiIkebukuro,376.7,6.2783,0.699392
+P0022,Nihonbashi / Mitsukoshimae District,Z09,Mitsukoshimae,257.8,4.2967,0.697896
+P0023,Yoyogi Park,C02,YoyogiKoen,596.6,9.9433,0.695667
+P0024,Nakamise Shopping Street,G19,Asakusa,215.7,3.595,0.686732
+P0025,Yoyogi Park Rockers,C03,MeijiJingumae,255.0,4.25,0.686576
+P0026,Koishikawa Korakuen Gardens,M22,Korakuen,250.9,4.1817,0.682863
+P0027,Kaminarimon,G19,Asakusa,134.0,2.2333,0.682475
+P0028,Tsukiji Outer Market,H11,Tsukiji,316.8,5.28,0.679684
+P0029,teamLab Borderless / Azabudai Hills,H05,Kamiyacho,332.4,5.54,0.678109
+P0030,Roppongi Hills,H04,Roppongi,304.2,5.07,0.674489
+P0031,Tokyo Skytree / Tokyo Solamachi,Z14,Oshiage,324.4,5.4067,0.674055
+P0032,Watch Shibuya Crossing,Z01,Shibuya,139.0,2.3167,0.673348
+P0033,Tokyo Skytree,Z14,Oshiage,324.4,5.4067,0.672727
+P0034,Tsukishima Monja Street,Y21,Tsukishima,20.2,0.3367,0.669244
+P0035,Shinjuku Golden Gai,M09,ShinjukuSanchome,323.6,5.3933,0.665654
+P0036,Meguro River / Nakameguro Cherry Blossom Corridor,H01,NakaMeguro,379.8,6.33,0.665546
+P0037,"Akihabara (Manga, Anime, Electronics, Freaks, etc.)",G14,Suehirocho,249.1,4.1517,0.6655
+P0038,Kurakoen,M22,Korakuen,297.4,4.9567,0.664681
+P0039,Ameyoko Market,G15,UenoHirokoji,204.4,3.4067,0.663548
+P0040,Ameyoko Market Street,G16,Ueno,84.7,1.4117,0.663548
+P0041,Rikugien Gardens,N14,Komagome,300.5,5.0083,0.66281
+P0042,Imperial Palace East Gardens,T08,Takebashi,443.4,7.39,0.661862
+P0043,Yebisu Garden Place,H02,Ebisu,641.2,10.6867,0.657264
+P0044,Children's Zoo STEP,G16,Ueno,434.1,7.235,0.656245
+P0045,Ueno Zoological Gardens,C14,Nezu,486.4,8.1067,0.656245
+P0046,Ueno Zoological Gardens (East Garden),C14,Nezu,528.6,8.81,0.656245
+P0047,Yanaka Ginza Shopping Street,C15,Sendagi,393.2,6.5533,0.654683
+P0048,The Ueno Royal Museum,G16,Ueno,137.1,2.285,0.653596
+P0049,Tokyo Dome City,M22,Korakuen,451.2,7.52,0.653554
+P0050,Ikebukuro Nishiguchi Park,F09,Ikebukuro,201.8,3.3633,0.653094
+P0051,Akihabara chuo reiwa Hiroba (Akihabara Central Reiwa Square),H16,Akihabara,186.7,3.1117,0.652852
+P0052,Kiyosumi Gardens,Z11,KiyosumiShirakawa,316.2,5.27,0.652389
+P0053,"View of trains at Ueno Station, and Ameyayokocho",G16,Ueno,90.0,1.5,0.648961
+P0054,"View of trains at Ueno Station, and Ameyayokocho",G16,Ueno,95.7,1.595,0.648961
+P0055,front of Shibuya station,Z01,Shibuya,49.2,0.82,0.647862
+P0056,teamLab Borderless: MORI Building DIGITAL ART MUSEUM,H05,Kamiyacho,136.9,2.2817,0.641746
+P0057,Tokyo Dome City Attractions,M22,Korakuen,451.2,7.52,0.638712
+P0058,Tokyo International Forum,Y18,Yurakucho,211.0,3.5167,0.63791
+P0059,The National Art Center,C05,Nogizaka,156.6,2.61,0.637651
+P0060,National Museum of Western Art,G16,Ueno,398.1,6.635,0.637153
+P0061,Yanaka Ginza,C15,Sendagi,393.2,6.5533,0.636501
+P0062,Harajuku Station,C03,MeijiJingumae,246.0,4.1,0.636454
+P0063,Ginza Dori / Ginza Crossing,G09,Ginza,43.1,0.7183,0.636364
+P0064,Akasaka Sacas / Akasaka Entertainment District,C06,Akasaka,78.9,1.315,0.636088
+P0065,SAMURAI NINJA MUSEUM TOKYO With Experience,G18,Tawaramachi,227.4,3.79,0.635163
+P0066,Front of Main Gate of Tokyo Imperial Palace,Y17,Sakuradamon,410.6,6.8433,0.63459
+P0067,Kokyo Gaien National Garden,C10,Nijubashimae,351.1,5.8517,0.634107
+P0068,Kokyo Gaien National Garden,C10,Nijubashimae,412.0,6.8667,0.634107
+P0069,View of Tokyo Skytree from Sumida River Walk,G19,Asakusa,313.3,5.2217,0.634037
+P0070,Sensō-ji,G19,Asakusa,343.1,5.7183,0.633442
+P0071,San Francisco Fillmore Wolfgang's Vault Art Museum,H16,Akihabara,169.7,2.8283,0.481818
+P0072,Tokyo Station train tracks Viewpoint 6F,M17,Tokyo,288.6,4.81,0.633103
+P0073,Tokyo Metropolitan Art Museum,G16,Ueno,626.5,10.4417,0.632671
+P0074,Omoide-yokochō,M08,Shinjuku,116.8,1.9467,0.631632
+P0075,Sumida Park,G19,Asakusa,785.1,13.085,0.63134
+P0076,Tokyo Kotsu Kaikan Coline,M16,Ginza,190.8,3.18,0.631016
+P0077,Sunshine City / Sunshine 60 Observatory,Y10,HigashiIkebukuro,394.9,6.5817,0.630756
+P0078,roof sightseeing SKYTREE,G19,Asakusa,139.8,2.33,0.629406
+P0079,Tokyo Midtown / Hinokicho Park,C05,Nogizaka,395.3,6.5883,0.628968
+P0080,Hama-rikyu Gardens,G08,Shimbashi,925.7,15.4283,0.628809
+P0081,"The National Art Center, Tokyo",C05,Nogizaka,176.1,2.935,0.62856
+P0082,Lotus observation zone,G15,UenoHirokoji,288.0,4.8,0.481818
+P0083,Ami Yokocho,G15,UenoHirokoji,248.3,4.1383,0.627184
+P0084,Tokyo Plaza Harajuku 5F,F15,MeijiJingumae,29.9,0.4983,0.626557
+P0085,Tokyo Plaza Harajuku 6F,F15,MeijiJingumae,30.6,0.51,0.626557
+P0086,Tokyo Plaza Harajuku 7F,F15,MeijiJingumae,41.7,0.695,0.626557
+P0087,Entry to the East Gardens,C11,Otemachi,266.5,4.4417,0.625499
+P0088,shibuya-san tourist information＆art center,Z01,Shibuya,212.4,3.54,0.624716
+P0089,Tsukiji Local Museum Park,H10,HigashiGinza,349.6,5.8267,0.624694
+P0090,Tokyo Metropolitan Government Building Observatory,M07,NishiShinjuku,607.7,10.1283,0.623096
+P0091,Kidzania Tokyo,Y22,Toyosu,439.0,7.3167,0.621666
+P0092,"National Museum of Modern Art, Tokyo (MOMAT)",T08,Takebashi,275.5,4.5917,0.620995
+P0093,Tokyo Metropolitan Government Office - South Observatory Deck,M07,NishiShinjuku,607.7,10.1283,0.620431
+P0094,Big Neon Boards,M08,Shinjuku,208.7,3.4783,0.619779
+P0095,Sumida Aquarium,Z14,Oshiage,437.0,7.2833,0.61924
+P0096,View of Shibuya Crossing from Station Walkway Bridge,Z01,Shibuya,90.3,1.505,0.619116
+P0097,Meiji University Museum,M20,Ochanomizu,280.1,4.6683,0.617902
+P0098,"Tokyo Skytree Town Campus, Chiba Institute of Technology",Z14,Oshiage,198.6,3.31,0.616269
+P0099,Miyashita Park south,Z01,Shibuya,199.2,3.32,0.615769
+P0100,Tsukijigawa park,H11,Tsukiji,171.3,2.855,0.615705
+P0101,Korea Museum,F12,HigashiShinjuku,409.4,6.8233,0.454545
+P0102,Tōkyō Station View,M17,Tokyo,245.1,4.085,0.61451
+P0103,teamLab Borderless,H05,Kamiyacho,332.4,5.54,0.614473
+P0104,Omoide Yokocho,M08,Shinjuku,116.8,1.9467,0.613451
+P0105,Shinjuku Gyoen National Garden,M10,ShinjukuGyoemmae,391.6,6.5267,0.612654
+P0106,KidZania Tokyo / Urban Dock LaLaport Toyosu,Y22,Toyosu,439.0,7.3167,0.612575
+P0107,Sunshine 60 Tennbodai (Viewpoint),Y10,HigashiIkebukuro,394.9,6.5817,0.612574
+P0108,Sunshine observatory,Y10,HigashiIkebukuro,419.6,6.9933,0.612574
+P0109,Mt. Fujimi,N14,Komagome,239.0,3.9833,0.481818
+P0110,Hinokicho Park (Tokyo MidTown Main Winter Illumination),H04,Roppongi,422.2,7.0367,0.610786
+P0111,Asakusa Hanayashiki,G19,Asakusa,605.3,10.0883,0.610643
+P0112,Mitsubishi Ichigokan Museum,C10,Nijubashimae,258.4,4.3067,0.610149
+P0113,Roppongi Museum,H04,Roppongi,441.9,7.365,0.609451
+P0114,Hokutopia,N16,Oji,75.3,1.255,0.60944
+P0115,Tsukiji River Ginza Park,H10,HigashiGinza,123.5,2.0583,0.609419
+P0116,Tsukijigawa Kameibashi Park,Y20,Shintomicho,231.2,3.8533,0.609419
+P0117,akasaka Sacas,C06,Akasaka,78.9,1.315,0.608815
+P0118,akasaka Sacas,C06,Akasaka,112.0,1.8667,0.608815
+P0119,Galaxy Shop,F15,MeijiJingumae,190.9,3.1817,0.608765
+P0120,Rikugi Garden,N14,Komagome,300.5,5.0083,0.608265
+P0121,Sword Shop & Ninja Experience by Samurai Ninja Museum,G18,Tawaramachi,332.4,5.54,0.60789
+P0122,Sword Shop & Ninja Experience by Samurai Ninja Museum,G18,Tawaramachi,335.0,5.5833,0.60789
+P0123,Train Museum,C16,NishiNippori,533.2,8.8867,0.454545
+P0124,SOMPO Museum of Art,M10,ShinjukuGyoemmae,286.8,4.78,0.607062
+P0125,teamLab Planets,Y22,Toyosu,855.9,14.265,0.605784
+P0126,Institute for Nature Study,N02,Shirokanedai,455.4,7.59,0.605484
+P0127,Fire Museum,M11,YotsuyaSanchome,64.8,1.08,0.603815
+P0128,Bank of Japan Currency Museum,Z09,Mitsukoshimae,145.0,2.4167,0.603605
+P0129,Tokyo Station Gallery,M17,Tokyo,162.6,2.71,0.603509
+P0130,Observation deck,N11,Korakuen,43.0,0.7167,0.481818
+P0131,Tsukijigawa Iwaibashi Park,H10,HigashiGinza,211.8,3.53,0.602745
+P0132,Paupau Aqua Garden,M09,ShinjukuSanchome,269.3,4.4883,0.602676
+P0133,Tokyo Toy Museum,M11,YotsuyaSanchome,248.1,4.135,0.602031
+P0134,Ota Memorial Museum of Art,C03,MeijiJingumae,92.0,1.5333,0.601775
+P0135,Kappabashi kitchen street,G18,Tawaramachi,330.0,5.5,0.601587
+P0136,Tokyo Character Street,M17,Tokyo,321.6,5.36,0.600294
+P0137,Tokyo Character Street,T09,Otemachi,349.9,5.8317,0.600294
+P0138,Tokyo Character Street,T09,Otemachi,356.7,5.945,0.600294
+P0139,Former Furukawa Gardens,N15,Nishigahara,524.5,8.7417,0.599959
+P0140,Meiji Jingu Inner Garden,C03,MeijiJingumae,587.6,9.7933,0.599479
+P0141,Mitsui Memorial Museum,G12,Mitsukoshimae,59.3,0.9883,0.59909
+P0142,Roppongi Hills Lighting,H04,Roppongi,419.0,6.9833,0.598778
+P0143,Sumida River Walk,Z11,KiyosumiShirakawa,580.2,9.67,0.5
+P0144,Sumida River Walk,Z10,Suitengumae,608.3,10.1383,0.5
+P0145,Sumida River Walk,Z10,Suitengumae,697.1,11.6183,0.5
+P0146,East-Ikebukuro Park,Y10,HigashiIkebukuro,598.3,9.9717,0.596371
+P0147,Higashiikebukuro Central Park,Y10,HigashiIkebukuro,464.8,7.7467,0.596371
+P0148,Mikado Game Center,T03,Takadanobaba,157.5,2.625,0.595908
+P0149,Tokyo Metropolitan Government Office - North Observatory Deck,M07,NishiShinjuku,518.7,8.645,0.595823
+P0150,The Baseball Hall of Fame And Museum,M22,Korakuen,266.0,4.4333,0.595633
+P0151,National Showa Memorial Museum,Z06,Kudanshita,47.4,0.79,0.594311
+P0152,Intermediatheque,M17,Tokyo,212.9,3.5483,0.594218
+P0153,Seikado bunko art museum,C10,Nijubashimae,194.8,3.2467,0.594042
+P0154,Yebisu Garden Place Winter Illumination,H02,Ebisu,641.2,10.6867,0.593627
+P0155,Naka-Ikebukuro Park,F09,Ikebukuro,375.4,6.2567,0.593612
+P0156,Skytree viewing mirror,Z14,Oshiage,548.7,9.145,0.593349
+P0157,Mori Art Museum,H04,Roppongi,314.0,5.2333,0.592965
+P0158,Akihabara Neribei Park,G14,Suehirocho,228.0,3.8,0.592931
+P0159,Seiko Museum,H09,Ginza,57.3,0.955,0.592374
+P0160,Ginza Six Garden,G09,Ginza,243.0,4.05,0.59213
+P0161,Mitsubishi Ichigokan Museum / Marunouchi,C10,Nijubashimae,258.4,4.3067,0.591968
+P0162,Nezu Museum,G02,OmoteSando,542.8,9.0467,0.591198
+P0163,Chiikawa Park,Y10,HigashiIkebukuro,497.5,8.2917,0.590761
+P0164,Kyu-Iwasaki-Tei Garden,C13,Yushima,358.6,5.9767,0.590569
+P0165,LIXIL Gallery,G10,Kyobashi,158.5,2.6417,0.481818
+P0166,Tokyo Station & Cat face Viewpoint 6F,M17,Tokyo,209.3,3.4883,0.590299
+P0167,Mitsuo Aida Museum,Y18,Yurakucho,260.5,4.3417,0.589276
+P0168,Gardens Free Guided Tour,C10,Nijubashimae,439.0,7.3167,0.454545
+P0169,Alice on Wednesday,F15,MeijiJingumae,134.5,2.2417,0.588689
+P0170,Aoyama St. Grace Cathedral,C04,OmoteSando,196.9,3.2817,0.588353
+P0171,Konica Minolta Planetaria Tokyo,M16,Ginza,136.1,2.2683,0.588284
+P0172,Tokyo Ramen Street,M17,Tokyo,327.6,5.46,0.587772
+P0173,Meiji Shrine Museum,C03,MeijiJingumae,390.2,6.5033,0.5874
+P0174,YEBISU BREWERY TOKYO,H02,Ebisu,686.7,11.445,0.586354
+P0175,National Film Archive of Japan,G10,Kyobashi,135.1,2.2517,0.586343
+P0176,Minato City Local History Museum,N02,Shirokanedai,155.3,2.5883,0.58555
+P0177,Japan Traditional Crafts Centre,Y09,Ikebukuro,148.0,2.4667,0.481818
+P0178,Stone Lanterns on Omotesandō at Aoyama Dōri,Z02,OmoteSando,22.2,0.37,0.481818
+P0179,Stone Lanterns on Omotesandō at Aoyama Dōri,Z02,OmoteSando,32.0,0.5333,0.481818
+P0180,Akasaka Gyoen,Z03,AoyamaItchome,564.6,9.41,0.418182
+P0181,Science Museum,T08,Takebashi,432.9,7.215,0.585147
+P0182,Godzilla Store,F13,ShinjukuSanchome,129.5,2.1583,0.584499
+P0183,Creative Museum Tokyo,G10,Kyobashi,214.2,3.57,0.584236
+P0184,Cherry Blossom Viewing,N01,Meguro,483.1,8.0517,0.583728
+P0185,Kappabashi Kitchenware Town,G18,Tawaramachi,502.1,8.3683,0.583405
+P0186,Cherry Blossom Viewing,Z06,Kudanshita,485.4,8.09,0.583036
+P0187,RETRO:G Retro Games (GiGO 6F),G14,Suehirocho,403.1,6.7183,0.582885
+P0188,Crossing View & Rooftop Lounge MAG8,Z01,Shibuya,29.1,0.485,0.582752
+P0189,"Museum of the Imperial Collections, Sannomaru Shozokan",C11,Otemachi,417.2,6.9533,0.582507
+P0190,KIMONO RENTAL TOKYO MAIKOYA Asakusa,G18,Tawaramachi,301.2,5.02,0.582268
+P0191,KIMONO TEA CEREMONY MAIKOYA TOKYO,G18,Tawaramachi,300.8,5.0133,0.582268
+P0192,Cat Street / Ura-Harajuku,F15,MeijiJingumae,167.5,2.7917,0.581818
+P0193,Takeshita Street / Harajuku,C03,MeijiJingumae,285.9,4.765,0.581818
+P0194,Hideyo Noguchi Memorial Hall Exhibition Room,M11,YotsuyaSanchome,530.3,8.8383,0.454545
+P0195,Mori Ogai Memorial Museum,C15,Sendagi,259.7,4.3283,0.581354
+P0196,Tokyo City View,H04,Roppongi,324.7,5.4117,0.581279
+P0197,Fukagawa Edo Museum,Z11,KiyosumiShirakawa,134.8,2.2467,0.58112
+P0198,Sen-Oku Hakukokan Tokyo,N05,RoppongiItchome,195.9,3.265,0.581004
+P0199,Yūshūkan Japanese military & war museum,Y14,Ichigaya,659.6,10.9933,0.580973
+P0200,Banknote and Postage Stamp Museum,N16,Oji,172.6,2.8767,0.580674
+P0201,Sakura viewpoint,Z06,Kudanshita,619.3,10.3217,0.580194
+P0202,Bridgestone Museum,N04,AzabuJuban,509.0,8.4833,0.454545
+P0203,Kitchen Street,T09,Otemachi,327.5,5.4583,0.5798
+P0204,Miyashita Park,Z01,Shibuya,284.5,4.7417,0.579405
+P0205,Meiji Park,G03,Gaiemmae,636.8,10.6133,0.579163
+P0206,LaQua Building,N11,Korakuen,177.5,2.9583,0.579128
+P0207,Samurai Museum,M08,Shinjuku,436.3,7.2717,0.578914
+P0208,Pola Museum Annex,Y19,GinzaItchome,112.7,1.8783,0.578755
+P0209,Deshio-no-minato,N14,Komagome,340.1,5.6683,0.454545
+P0210,Ghinza Graphic Gallery,H09,Ginza,287.0,4.7833,0.578597
+P0211,Ueno Zoological Gardens (West Garden),G16,Ueno,541.2,9.02,0.577909
+P0212,"The University Museum, the University of Tokyo",M21,HongoSanchome,222.6,3.71,0.577615
+P0213,Naka-dori,C10,Nijubashimae,224.0,3.7333,0.577411
+P0214,Suntory Museum of Art,C05,Nogizaka,382.4,6.3733,0.577359
+P0215,Japan Sake and Shōchū Information Center,G07,Toranomon,218.9,3.6483,0.577169
+P0216,OWL,F09,Ikebukuro,350.8,5.8467,0.576854
+P0217,University of Tokyo Agricultural Science Museum,N12,Todaimae,225.3,3.755,0.481818
+P0218,はとバス東京営業所,M17,Tokyo,336.6,5.61,0.576836
+P0219,Kite Museum,Z09,Mitsukoshimae,195.7,3.2617,0.481818
+P0220,Higashi-Ikebukuro Playground,Y10,HigashiIkebukuro,682.3,11.3717,0.576284
+P0221,Postal Museum Japan,Z14,Oshiage,205.1,3.4183,0.575443
+P0222,Mori Art Museum / Tokyo City View,H04,Roppongi,314.0,5.2333,0.574783
+P0223,Tobacco & Salt Museum,Z14,Oshiage,557.6,9.2933,0.573975
+P0224,Ozu Washi,H15,Kodemmacho,284.9,4.7483,0.573236
+P0225,Ramen Cooking Tokyo,Y21,Tsukishima,203.9,3.3983,0.57301
+P0226,JCII Camera Museum,Z05,Hanzomon,128.5,2.1417,0.572689
+P0227,Taro Okamoto Memorial Museum,G02,OmoteSando,501.9,8.365,0.571919
+P0228,Daiichi Sankyo Kusuri Museum,G12,Mitsukoshimae,236.6,3.9433,0.571881
+P0229,Panasonic Shiodome Museum of Art,G08,Shimbashi,350.1,5.835,0.571645
+P0230,TOTO GALLERY · MA,C05,Nogizaka,115.5,1.925,0.571586
+P0231,Tokyo Anime Center,Z01,Shibuya,220.2,3.67,0.570505
+P0232,Koga Masao Museum of Music,C01,YoyogiUehara,136.6,2.2767,0.570344
+P0233,古賀政男音楽博物館,C01,YoyogiUehara,147.1,2.4517,0.570344
+P0234,"The University Art Museum, Tokyo University of the Arts",C14,Nezu,595.5,9.925,0.570265
+P0235,Kabukicho Park,M08,Shinjuku,267.4,4.4567,0.569641
+P0236,South end of Ginza Illumination,G08,Shimbashi,195.1,3.2517,0.569641
+P0237,Tsukiji Local Museum,H10,HigashiGinza,296.2,4.9367,0.569641
+P0238,Nezu Shrine,N12,Todaimae,311.0,5.1833,0.569606
+P0239,Vivarium,C14,Nezu,502.2,8.37,0.454545
+P0240,"Institute for Nature Study, National Museum of Nature and Science",N02,Shirokanedai,438.2,7.3033,0.56912
+P0241,Jiyu Gakuen Myonichikan,Y09,Ikebukuro,442.7,7.3783,0.56912
+P0242,小川と湿地,N02,Shirokanedai,669.2,11.1533,0.56912
+P0243,D47 Museum,G01,Shibuya,62.0,1.0333,0.569112
+P0244,NHK Museum of Broadcasting,H05,Kamiyacho,341.9,5.6983,0.568254
+P0245,JAPAN OLYMPIC MUSEUM,G03,Gaiemmae,562.8,9.38,0.567495
+P0246,Oi Ocha Museum,G08,Shimbashi,299.7,4.995,0.567389
+P0247,Printing Museum,Y12,Edogawabashi,659.9,10.9983,0.567188
+P0248,Shinjuku Information Center,M09,ShinjukuSanchome,276.2,4.6033,0.566242
+P0249,Museum of Contemporary Art Tokyo,Z11,KiyosumiShirakawa,786.7,13.1117,0.566098
+P0250,Toyo Bunko Museum,N14,Komagome,543.9,9.065,0.565982
+P0251,Former Asakura Estate,H01,NakaMeguro,414.9,6.915,0.565694
+P0252,Kyu Asakura House,H01,NakaMeguro,425.5,7.0917,0.565694
+P0253,Museum of Meteorological Science,H06,ToranomonHills,242.9,4.0483,0.565599
+P0254,Asakura Museum of Sculpture,C15,Sendagi,485.5,8.0917,0.565323
+P0255,TenQ,M22,Korakuen,432.5,7.2083,0.56518
+P0256,Ameya-Yokochō,G16,Ueno,220.3,3.6717,0.564621
+P0257,Cherry Blossom Viewing,Y12,Edogawabashi,462.6,7.71,0.564472
+P0258,Shinjuku Historical Museum,N08,Yotsuya,570.0,9.5,0.56407
+P0259,TOKYO TORCH Terrace,Z09,Mitsukoshimae,257.8,4.2967,0.563325
+P0260,Masae Kato's Retro Collection Outdoor Museum,F08,Kanamecho,1191.3,19.855,0.472727
+P0261,Natsuge Museum,T03,Takadanobaba,138.8,2.3133,0.563241
+P0262,Otonashi Water Park,N16,Oji,241.0,4.0167,0.562849
+P0263,Ministry of Justice Museum,Y17,Sakuradamon,205.2,3.42,0.562723
+P0264,Yoshida Hochiku Memorial Hall,H05,Kamiyacho,295.7,4.9283,0.481818
+P0265,Tokyo Waterworks Historical Museum,M21,HongoSanchome,380.7,6.345,0.561955
+P0266,Soy Sauce Centre (Shoyu Kaikan),Z10,Suitengumae,300.3,5.005,0.454545
+P0267,21_21 Design Sight,C05,Nogizaka,388.8,6.48,0.561525
+P0268,Hyokeikan,G16,Ueno,754.5,12.575,0.561058
+P0269,Musée Hamaguchi Yōzō: Yamasa Collection,Z10,Suitengumae,161.4,2.69,0.560961
+P0270,Musée Hamaguchi Yōzō: Yamasa Collection,Z10,Suitengumae,162.0,2.7,0.560961
+P0271,Advertising Museum Tokyo,G08,Shimbashi,490.2,8.17,0.560823
+P0272,Mohri Garden,H04,Roppongi,277.2,4.62,0.560734
+P0273,Tokyo kart,G19,Asakusa,312.5,5.2083,0.560349
+P0274,Old Shimbashi Station Railway History Exhibition Hall,G08,Shimbashi,323.0,5.3833,0.560242
+P0275,Pigeon house,Z06,Kudanshita,649.1,10.8183,0.454545
+P0276,The Watari Museum Contemporary Art,G03,Gaiemmae,404.4,6.74,0.559639
+P0277,Taikokan Drum Museum,G18,Tawaramachi,249.5,4.1583,0.559629
+P0278,Edogawa Zoo,T16,NishiKasai,729.7,12.1617,0.559509
+P0279,Natsume Soseki Memorial Museum,T04,Waseda,352.4,5.8733,0.559262
+P0280,Marunouchi House,M17,Tokyo,58.2,0.97,0.558749
+P0281,Okuma Auditorium,T04,Waseda,367.0,6.1167,0.558318
+P0282,梅園,C13,Yushima,211.7,3.5283,0.445455
+P0283,Parliamentary Museum,M14,KokkaiGijidomae,405.0,6.75,0.557761
+P0284,Front of Nijūbashi,Y17,Sakuradamon,400.5,6.675,0.557248
+P0285,東京都目黒区立 川の資料館,H01,NakaMeguro,438.6,7.31,0.556446
+P0286,Roof Garden,H12,Hatchobori,246.9,4.115,0.555766
+P0287,"The Museum of the Imperial Collections, Sannomaru Shozokan",C11,Otemachi,417.2,6.9533,0.555234
+P0288,たもん,M01,Ogikubo,182.3,3.0383,0.445455
+P0289,Meiji Jingu Treasure Museum,F14,KitaSando,693.4,11.5567,0.554306
+P0290,Silk Road cosmetic Ueno,G15,UenoHirokoji,157.8,2.63,0.554133
+P0291,La Porte Aoyama,C04,OmoteSando,355.3,5.9217,0.554028
+P0292,"Memorial Museum for Soldiers, Detainees in Siberia, and Postwar Repatriates",M07,NishiShinjuku,361.8,6.03,0.553813
+P0293,Kachidoki Bridge,H11,Tsukiji,602.7,10.045,0.553374
+P0294,Tokyo mystery circus,M08,Shinjuku,327.7,5.4617,0.553262
+P0295,Aqua Park Shinagawa,N02,Shirokanedai,1373.9,22.8983,0.553208
+P0296,Aqua Park Shinagawa,N02,Shirokanedai,1390.0,23.1667,0.553208
+P0297,aquarium de carpe,N16,Oji,1304.9,21.7483,0.4
+P0298,Shibusawa Memorial Museum,N15,Nishigahara,449.8,7.4967,0.553036
+P0299,Daigo Fukuryu Maru Museum,Y24,ShinKiba,576.2,9.6033,0.552922
+P0300,Min-On Music Library,M11,YotsuyaSanchome,612.6,10.21,0.552691
+P0301,Shibuya Blue Cave Winter Illumination,C03,MeijiJingumae,620.3,10.3383,0.552601
+P0302,Okuma Garden,T04,Waseda,432.5,7.2083,0.552516
+P0303,Oyokogawa Shinsui Park (Long Slide),Z14,Oshiage,542.2,9.0367,0.552279
+P0304,Stamp Museum,T03,Takadanobaba,558.6,9.31,0.552189
+P0305,Matsuoka Museum of Art,N02,Shirokanedai,443.7,7.395,0.551916
+P0306,Ancient Orient Museum,Y10,HigashiIkebukuro,363.0,6.05,0.551855
+P0307,Kita City Asukayama Museum,N15,Nishigahara,498.8,8.3133,0.551763
+P0308,Okura Museum of Art (Okura Shukokan),H06,ToranomonHills,410.5,6.8417,0.551482
+P0309,SHIBUYA CAST. GARDEN,Z01,Shibuya,388.3,6.4717,0.551352
+P0310,Train viewpoint,F13,ShinjukuSanchome,444.3,7.405,0.454545
+P0311,Paper Museum,N16,Oji,524.6,8.7433,0.550775
+P0312,Caretta Shiodome Observation Deck 46th floor,G08,Shimbashi,510.9,8.515,0.550376
+P0313,Japanese Animals,G16,Ueno,519.9,8.665,0.550241
+P0314,Life safety learning center,Y09,Ikebukuro,379.7,6.3283,0.550172
+P0315,Street Kart Tokyo Bay,Y24,ShinKiba,866.9,14.4483,0.550075
+P0316,Panda Forest,C14,Nezu,507.4,8.4567,0.454545
+P0317,Shiseido Gallery,G08,Shimbashi,333.4,5.5567,0.549221
+P0318,Ichiyo Memorial Museum,H20,Minowa,440.7,7.345,0.548667
+P0319,Kikuchi Kanjitsu Memorial Tomo Museum,H06,ToranomonHills,316.2,5.27,0.548629
+P0320,Otani Art Museum,N15,Nishigahara,448.0,7.4667,0.548402
+P0321,万世橋駅 跡地,M19,Awajicho,350.8,5.8467,0.548014
+P0322,SkyTree sunset viewpoint,Z14,Oshiage,861.0,14.35,0.547588
+P0323,Hayashi Fumiko Memorial Hall,T02,Ochiai,599.5,9.9917,0.547333
+P0324,Himalayan Cedar Tree,C14,Nezu,488.1,8.135,0.454545
+P0325,Your Name (Kimi no na wa.) Stairs,M11,YotsuyaSanchome,475.1,7.9183,0.546577
+P0326,Joyful Minowa Shopping Arcade Entrance,H20,Minowa,317.7,5.295,0.546447
+P0327,World Bags & Luggage Museum,G19,Asakusa,372.5,6.2083,0.546273
+P0328,Morikazu Kumagai Art Museum,F07,Senkawa,510.5,8.5083,0.545509
+P0329,Kagurazaka District,T05,Kagurazaka,70.5,1.175,0.545455
+P0330,映画「天気の子」ロケ地,C16,NishiNippori,601.2,10.02,0.545041
+P0331,Shiodome Sio-Site,G08,Shimbashi,355.3,5.9217,0.544946
+P0332,Meiji Jingū Forest,F14,KitaSando,804.3,13.405,0.544934
+P0333,Meiji Memorial Picture Gallery,Z03,AoyamaItchome,872.3,14.5383,0.544784
+P0334,Ebara Hatakeyama Museum of Art,N02,Shirokanedai,622.4,10.3733,0.543961
+P0335,Futaba Ranch,G16,Ueno,470.0,7.8333,0.454545
+P0336,Theatre Museum,T04,Waseda,534.7,8.9117,0.543601
+P0337,Waseda University Tsubouchi Memorial Theatre Museum,T04,Waseda,531.8,8.8633,0.543601
+P0338,Sumida River Walk,Z10,Suitengumae,872.1,14.535,0.445455
+P0339,もみじの新緑・紅葉,N02,Shirokanedai,566.4,9.44,0.454545
+P0340,Ichigaya Letterpress Factory,N09,Ichigaya,546.5,9.1083,0.542909
+P0341,Zoshigaya Missionary Museum,F10,Zoshigaya,533.5,8.8917,0.542355
+P0342,Shin-Okuyama,G19,Asakusa,473.2,7.8867,0.418182
+P0343,Barrels of Sake Wrapped in Straw,C03,MeijiJingumae,539.5,8.9917,0.542185
+P0344,Yokoyama Taikan Memorial Hall,C13,Yushima,610.0,10.1667,0.542128
+P0345,Wiid Flower Garden,C17,Machiya,533.9,8.8983,0.418182
+P0346,Inoue Enryo Memorial Museum,N13,HonKomagome,369.6,6.16,0.541781
+P0347,たいとうアートギャラリー,G17,Inaricho,249.6,4.16,0.541285
+P0348,Japanese Datum of Lebeling,M14,KokkaiGijidomae,332.9,5.5483,0.540754
+P0349,Le Forum – Hermès,H09,Ginza,55.6,0.9267,0.540596
+P0350,The Gallery of Horyuji Treasures,C14,Nezu,768.2,12.8033,0.54048
+P0351,ファームガーデン,Z14,Oshiage,461.2,7.6867,0.540429
+P0352,National Archives of Japan,T08,Takebashi,343.0,5.7167,0.539452
+P0353,Bunkyo Historical Museum,M21,HongoSanchome,351.5,5.8583,0.53897
+P0354,Museum of Modern Japanese Literature,C01,YoyogiUehara,697.6,11.6267,0.53897
+P0355,Yunth Midtown Ice Rink,C05,Nogizaka,488.9,8.1483,0.537348
+P0356,Yumenoshima Tropical Greenhouse Dome,Y24,ShinKiba,667.7,11.1283,0.537021
+P0357,Fujifilm Photo History Museum,H04,Roppongi,305.0,5.0833,0.536875
+P0358,"Yayoi Museum,Takeshisa Yumeji Museum",C14,Nezu,338.5,5.6417,0.536875
+P0359,Wood and Plywood Museum,Y24,ShinKiba,469.3,7.8217,0.536633
+P0360,Rinnoji Temple,G16,Ueno,613.8,10.23,0.418182
+P0361,Tokyo Origami Museum,G19,Asakusa,661.9,11.0317,0.536387
+P0362,ファーブル昆虫館 「虫の詩人の館」,C15,Sendagi,597.9,9.965,0.535096
+P0363,Yasuda Auditorium,C14,Nezu,534.0,8.9,0.535006
+P0364,天神湯 ( てんじんゆ ),M07,NishiShinjuku,575.9,9.5983,0.454545
+P0365,Wakaba Higashi Park,M12,Yotsuya,157.4,2.6233,0.534141
+P0366,National Museum of Modern and Contemporary Architecture,C13,Yushima,437.2,7.2867,0.533688
+P0367,Extinct Media Museum,M18,Otemachi,339.2,5.6533,0.532778
+P0368,"Institute for Nature Study, National Museum of Nature and Science",N02,Shirokanedai,545.6,9.0933,0.532756
+P0369,Women's Active Museum on War and Peace,T04,Waseda,591.1,9.8517,0.532141
+P0370,Tagawa Suiho Norakuro Museum,Z11,KiyosumiShirakawa,401.4,6.69,0.532032
+P0371,Basho Hermitage Sites Outlook Garden,Z11,KiyosumiShirakawa,558.1,9.3017,0.531363
+P0372,Parco Museum Tokyo,Z01,Shibuya,322.7,5.3783,0.531017
+P0373,Winter Illumination at Tokyo Midtown Garden,C05,Nogizaka,395.3,6.5883,0.530957
+P0374,Little Museum of Glass Books,G19,Asakusa,446.7,7.445,0.530782
+P0375,"Koishikawa Annex, Museum of Architecture, The University Museum, The University of Tokyo",M23,Myogadani,603.8,10.0633,0.530664
+P0376,郷土博物館分館,M01,Ogikubo,536.0,8.9333,0.530179
+P0377,Kachidoki Bridge Museum,H11,Tsukiji,553.0,9.2167,0.529806
+P0378,Yoshimura Akira Memorial Museum of Literature,C17,Machiya,455.2,7.5867,0.529294
+P0379,Ikenami Shōtarō Memorial Museum,H19,Iriya,581.7,9.695,0.527357
+P0380,Kigumi museum,T04,Waseda,496.5,8.275,0.527209
+P0381,Toshima City Local Museum,Y09,Ikebukuro,411.7,6.8617,0.526757
+P0382,Span Art Gallery,G10,Kyobashi,27.9,0.465,0.525549
+P0383,Samurai Museum Tokyo Ticket Centre,M07,NishiShinjuku,1017.3,16.955,0.4
+P0384,NHK Studio Park,Z01,Shibuya,746.9,12.4483,0.523767
+P0385,Yamatane Museum of Art,H03,HiroO,796.3,13.2717,0.523181
+P0386,Sunamachi Ginza Shopping Street,T15,MinamiSunamachi,1262.0,21.0333,0.522141
+P0387,Nezu Shrine Azalea Garden,N12,Todaimae,311.0,5.1833,0.521036
+P0388,Izakaya Area,H16,Akihabara,894.4,14.9067,0.520487
+P0389,びわ湖長浜観音ハウス,G16,Ueno,242.4,4.04,0.520461
+P0390,Community Garden,N05,RoppongiItchome,289.6,4.8267,0.445455
+P0391,LE DECO,G01,Shibuya,399.4,6.6567,0.518571
+P0392,Ninomaru garden,T08,Takebashi,342.0,5.7,0.517449
+P0393,Art Museum of the Faculty of Arts and Sciences of the University of Tokyo,C02,YoyogiKoen,1144.9,19.0817,0.4
+P0394,Camellia Hill,T04,Waseda,741.4,12.3567,0.363636
+P0395,Shoto Museum of Art,Z01,Shibuya,839.7,13.995,0.512574
+P0396,渋谷区立松濤美術館,Z01,Shibuya,846.2,14.1033,0.512574
+P0397,Japanese Folk Crafts Museum,C01,YoyogiUehara,910.2,15.17,0.510331
+P0398,Kurenai Museum,G02,OmoteSando,756.8,12.6133,0.4
+P0399,Tokyo Photographic Art Museum,H02,Ebisu,744.1,12.4017,0.510331
+P0400,Suginami Poetry Museum,M01,Ogikubo,728.0,12.1333,0.4
+P0401,Yasukuni Shrine / Yushukan Museum,Y14,Ichigaya,659.6,10.9933,0.508246
+P0402,Gallery X,Z01,Shibuya,321.4,5.3567,0.508048
+P0403,國學院大學博物館,G01,Shibuya,834.3,13.905,0.507791
+P0404,SCAI THE BATHHOUSE,C14,Nezu,652.9,10.8817,0.507237
+P0405,Former Marquis Maeda Mansion,C01,YoyogiUehara,750.2,12.5033,0.507036
+P0406,Former Marquis Maeda Mansion,C01,YoyogiUehara,755.7,12.595,0.507036
+P0407,Senshuen Garden,M23,Myogadani,389.8,6.4967,0.418182
+P0408,Minato Local Museum,N03,ShirokaneTakanawa,1079.3,17.9883,0.4
+P0409,The Artcomplex Center of Tokyo,M11,YotsuyaSanchome,409.3,6.8217,0.503622
+P0410,Asukayama Park,N16,Oji,451.0,7.5167,0.503611
+P0411,Eisei Bunko,Y11,Gokokuji,769.6,12.8267,0.503548
+P0412,Eizaburo Kioka and Umeko Memorial Archives,M01,Ogikubo,737.3,12.2883,0.4
+P0413,The Sumida Hokusai Museum,Z13,Kinshicho,1312.5,21.875,0.50123
+P0414,Main Garden,M12,Yotsuya,496.5,8.275,0.501062
+P0415,Meguro Museum of Art,N01,Meguro,770.9,12.8483,0.500885
+P0416,Daikanyama District,H01,NakaMeguro,577.9,9.6317,0.5
+P0417,Denboin Garden,G19,Asakusa,390.9,6.515,0.499773
+P0418,Nekomachi Gallery,C15,Sendagi,338.6,5.6433,0.499689
+P0419,Kanda Book Town,Z07,Jimbocho,96.2,1.6033,0.499174
+P0420,Mt. Mikasa,C09,Hibiya,317.0,5.2833,0.390909
+P0421,Thousand Torii,G05,AkasakaMitsuke,256.6,4.2767,0.497616
+P0422,Arakawa Museum Of Aqua,N19,AkabaneIwabuchi,765.3,12.755,0.496394
+P0423,Front Garden,M12,Yotsuya,310.0,5.1667,0.495993
+P0424,Ohyama,G08,Shimbashi,1429.1,23.8183,0.363636
+P0425,Kanze No Theater,Z01,Shibuya,733.3,12.2217,0.4
+P0426,梅めぐり散歩道,G19,Asakusa,781.6,13.0267,0.494977
+P0427,Edo History Walking Corner,N09,Ichigaya,26.9,0.4483,0.494537
+P0428,Jingu Bridge,C03,MeijiJingumae,153.4,2.5567,0.493316
+P0429,Logistics Museum,N02,Shirokanedai,1127.1,18.785,0.492991
+P0430,Kitadani Park,Z01,Shibuya,529.2,8.82,0.49213
+P0431,Adachi City Museum,C20,KitaAyase,1192.4,19.8733,0.491055
+P0432,Sugamo Jizo Dori Shopping Street,N14,Komagome,1221.2,20.3533,0.49096
+P0433,Sugamo Jizo Dori Shopping Street,N15,Nishigahara,1317.5,21.9583,0.49096
+P0434,コボちゃん増,T05,Kagurazaka,226.6,3.7767,0.490545
+P0435,Center of the Tokyo Raids and War Damage,Z12,Sumiyoshi,976.7,16.2783,0.490496
+P0436,Edo Taitō Traditional Crafts Museum,G19,Asakusa,722.2,12.0367,0.490257
+P0437,Toguri Museum of Art,Z01,Shibuya,776.2,12.9367,0.490014
+P0438,Calligraphy Museum,H19,Iriya,858.0,14.3,0.489567
+P0439,Suginami Historical Museum,Mb03,Honancho,1160.6,19.3433,0.489517
+P0440,Sumo Ring,H15,Kodemmacho,1418.6,23.6433,0.489454
+P0441,Koishikawa Botanical Gardens,M23,Myogadani,748.2,12.47,0.488967
+P0442,小石川樹木園,M23,Myogadani,787.4,13.1233,0.488967
+P0443,JGSDF Public Information Center,F01,Wakoshi,1243.2,20.72,0.487853
+P0444,reload roof terrace,C01,YoyogiUehara,1133.5,18.8917,0.487583
+P0445,TABATA Memorial Museum of Writers and Artists,C16,NishiNippori,968.0,16.1333,0.485701
+P0446,Bunka Gakuen Costume Museum,M08,Shinjuku,845.4,14.09,0.484839
+P0447,Sumida Heritage Museum,G19,Asakusa,816.8,13.6133,0.484633
+P0448,Cherry Tree Area,F14,KitaSando,599.6,9.9933,0.483778
+P0449,Japanese Sword Museum,G18,Tawaramachi,1271.9,21.1983,0.483593
+P0450,Japanese Sword Museum,F14,KitaSando,1376.9,22.9483,0.363636
+P0451,白根記念渋谷区郷土博物館,G01,Shibuya,939.3,15.655,0.483486
+P0452,KAWADU Sakura cherry blossom,T13,Kiba,472.5,7.875,0.481919
+P0453,Shikian,H19,Iriya,844.1,14.0683,0.480993
+P0454,Nakamura Tsune Atelier Museum,T03,Takadanobaba,910.6,15.1767,0.480905
+P0455,Accessory Museum,H01,NakaMeguro,1015.4,16.9233,0.48055
+P0456,Sato Art Museum,M11,YotsuyaSanchome,788.9,13.1483,0.480095
+P0457,Mejiro Garden,Y09,Ikebukuro,705.1,11.7517,0.479912
+P0458,Junjo Shotengai,M03,ShinKoenji,940.7,15.6783,0.476237
+P0459,Boutique de baguettes artisanales,Z14,Oshiage,989.7,16.495,0.4
+P0460,Toshima City Tokiwaso Manga Museum,F08,Kanamecho,1499.6,24.9933,0.474924
+P0461,Sekido Museum of Art,H21,MinamiSenju,995.0,16.5833,0.474618
+P0462,Seiko Museum,H21,MinamiSenju,1446.7,24.1117,0.363636
+P0463,Suginami Animation Museum,M01,Ogikubo,1292.4,21.54,0.472691
+P0464,Sumo Museum,G18,Tawaramachi,1430.9,23.8483,0.472311
+P0465,Mansei Bridge,G13,Kanda,380.1,6.335,0.471902
+P0466,渋谷区ふれあい植物センター,H02,Ebisu,703.8,11.73,0.47082
+P0467,Urayasu City Museum of Local History,T18,Urayasu,1390.7,23.1783,0.470623
+P0468,Torii Gates,N12,Todaimae,306.8,5.1133,0.390909
+P0469,Tokyo Opera City Art Gallery,M07,NishiShinjuku,1383.2,23.0533,0.469582
+P0470,Itabashi Art Museum,F02,ChikatetsuNarimasu,1459.0,24.3167,0.462849
+P0471,Great Kanto Earthquake Memorial Museum,G19,Asakusa,1217.4,20.29,0.460415
+P0472,Shōkokan,H01,NakaMeguro,1362.4,22.7067,0.363636
+P0473,Itabashi Historical Museum,F02,ChikatetsuNarimasu,1458.5,24.3083,0.454274
+P0474,Yanagihara chigusaen Garden,H22,KitaSenju,949.0,15.8167,0.449719
+P0475,杉並区立科学館,M01,Ogikubo,1365.7,22.7617,0.363636
+P0476,Medicinal-herb garden,M23,Myogadani,803.0,13.3833,0.447778
+P0477,Toyoshimaku Tokiwasō-dōri oyasumidokoro,F08,Kanamecho,1396.5,23.275,0.446898
+P0478,Former Yasuda Gardens,G18,Tawaramachi,1321.4,22.0233,0.445815
+P0479,Hotaru-sawa Firefly Spot,Y11,Gokokuji,755.6,12.5933,0.363636
+P0480,NTT Docomo History Square,G18,Tawaramachi,1401.7,23.3617,0.441765
+P0481,平成庭園・源心庵,T16,NishiKasai,792.4,13.2067,0.441447
+P0482,Saeki Yuzo Atelier Museum,T02,Ochiai,1332.7,22.2117,0.44068
+P0483,Kyu Shiba Rikyu Garden,G08,Shimbashi,1379.2,22.9867,0.438965
+P0484,ROKUCHO MUSEUM FLORA,C20,KitaAyase,1292.9,21.5483,0.438771
+P0485,Meguro River,N01,Meguro,751.3,12.5217,0.436111
+P0486,常夜灯,T21,Myoden,844.8,14.08,0.432594
+P0487,Clone Factory (Build a replica of yourself),H16,Akihabara,277.7,4.6283,0.418182
+P0488,Multiple train tracks view,M20,Ochanomizu,134.3,2.2383,0.418182
+P0489,Trainspotting,G16,Ueno,93.1,1.5517,0.418182
+P0490,樹,T22,BarakiNakayama,1416.4,23.6067,0.327273
+P0491,Sendaiborigawa Park West End,T14,Toyocho,867.3,14.455,0.411874
+P0492,Kotokai,Z06,Kudanshita,624.6,10.41,0.390909
+P0493,Tamano-no-iso,N14,Komagome,376.4,6.2733,0.390909
+P0494,啓太朗,M24,ShinOtsuka,300.9,5.015,0.390909
+P0495,View of Tokyo Skytree across Sumida river,G19,Asakusa,474.1,7.9017,0.382336
+P0496,Gallery Piccolo,C13,Yushima,245.2,4.0867,0.381818
+P0497,Mebaenoniwa,Z04,Nagatacho,249.8,4.1633,0.381818
+P0498,Second Flowerbed,C09,Hibiya,245.3,4.0883,0.381818
+P0499,Ginza Crossing,G09,Ginza,43.1,0.7183,0.363636
+P0500,Kabukicho Ichibangai-dori Street,M08,Shinjuku,217.2,3.62,0.363636
+P0501,Cherry zone,T08,Takebashi,453.4,7.5567,0.354545
+P0502,Philosopher's Forest,Y10,HigashiIkebukuro,308.1,5.135,0.354545
+P0503,Ginza Chuo Dori Winter Illumination,G10,Kyobashi,308.7,5.145,0.336364
+P0504,HANEKAME,Z13,Kinshicho,896.5,14.9417,0.336364
+P0505,Harajuku Street,F15,MeijiJingumae,395.3,6.5883,0.336364
+P0506,Kabukicho,M08,Shinjuku,388.1,6.4683,0.336364
+P0507,Keita Shibata Memorial Hall,N13,HonKomagome,843.6,14.06,0.336364
+P0508,Stairs to Street Level,H14,Ningyocho,874.9,14.5817,0.336364
+P0509,Ginza Art Gallery,G08,Shimbashi,352.9,5.8817,0.290909
+P0510,Hyperlane,F09,Ikebukuro,345.5,5.7583,0.625154
+P0511,Taito Station,G15,UenoHirokoji,154.0,2.5667,0.593416
+P0512,Shiodome City Center Winter Illumination,G08,Shimbashi,325.1,5.4183,0.582519
+P0513,Konica-Minolta Planetarium Tenku,Z14,Oshiage,248.5,4.1417,0.580137
+P0514,Namjatown,Y10,HigashiIkebukuro,334.4,5.5733,0.569382
+P0515,rue commerçante,M03,ShinKoenji,518.2,8.6367,0.454545
+P0516,First Flowerbed,C09,Hibiya,155.9,2.5983,0.554836
+P0517,イタリア街,G08,Shimbashi,699.3,11.655,0.553262
+P0518,Daini Nakazato Crossing,N14,Komagome,626.0,10.4333,0.551576
+P0519,Fuji Golf Driving Range,T13,Kiba,368.3,6.1383,0.551229
+P0520,Taito Station,G19,Asakusa,408.3,6.805,0.550376
+P0521,Shintaro Suzuki Memorial Museum,M24,ShinOtsuka,46.9,0.7817,0.55004
+P0522,Metrix,H04,Roppongi,266.4,4.44,0.481818
+P0523,Chuo Ward Local History Museum,H12,Hatchobori,261.5,4.3583,0.545745
+P0524,KOIZUMI YAKUMO PARK LAFKADIO HEARN,F12,HigashiShinjuku,263.3,4.3883,0.544667
+P0525,Mitsubishi UFJ Trust and Banking Museum,M17,Tokyo,151.8,2.53,0.544386
+P0526,TOKYO VIRTUAL CIRCUIT,C06,Akasaka,288.8,4.8133,0.481818
+P0527,Kume Museum of Art,N01,Meguro,243.1,4.0517,0.5398
+P0528,Bicycle Culture Center,N01,Meguro,243.8,4.0633,0.53641
+P0529,ちいさな動物たちのおうち,G16,Ueno,399.3,6.655,0.490909
+P0530,Shitamachi Museum,G15,UenoHirokoji,276.1,4.6017,0.532076
+P0531,Sugino Costume Museum,N01,Meguro,194.6,3.2433,0.532076
+P0532,水琴窟,C13,Yushima,140.6,2.3433,0.481818
+P0533,The History Museum of J-Koreans,N04,AzabuJuban,370.8,6.18,0.529552
+P0534,Kodansha Noma Memorial Museum,Y11,Gokokuji,614.1,10.235,0.52581
+P0535,Arakawa Ward Arakawa Hometown Culture Center,H21,MinamiSenju,648.7,10.8117,0.525315
+P0536,荒川ふるさと文化館,H21,MinamiSenju,638.6,10.6433,0.525315
+P0537,方南銀座商店街,Mb03,Honancho,43.2,0.72,0.525108
+P0538,Kabutochō Kayabachō Machikado Museum,T11,Kayabacho,203.2,3.3867,0.523023
+P0539,Puppet House,N10,Iidabashi,181.4,3.0233,0.523023
+P0540,Museum of Health and Medicine,M21,HongoSanchome,529.3,8.8217,0.522964
+P0541,Former Mikawashima Sewage Treatment Plant,C17,Machiya,624.8,10.4133,0.522767
+P0542,ビオトープ浮島,C14,Nezu,588.2,9.8033,0.418182
+P0543,Ishikawajima Museum,Y21,Tsukishima,578.0,9.6333,0.522163
+P0544,Otomate Square,F09,Ikebukuro,425.9,7.0983,0.520654
+P0545,Police Museum,G10,Kyobashi,182.1,3.035,0.481818
+P0546,Toyosu Market / Tuna Auction Observation Area,Y22,Toyosu,1834.4,30.5733,0.519737
+P0547,Good street photography,G13,Kanda,352.8,5.88,0.454545
+P0548,Archives,F10,Zoshigaya,485.2,8.0867,0.454545
+P0549,Chuo Ward Local History Museum,H11,Tsukiji,400.1,6.6683,0.518472
+P0550,Japan-China Friendship Center Art Museum,T06,Iidabashi,315.1,5.2517,0.518472
+P0551,旧大塚家住宅,T18,Urayasu,476.7,7.945,0.518472
+P0552,旧宇田川家住宅,T18,Urayasu,473.2,7.8867,0.518472
+P0553,National Printing Bureau Museum,N09,Ichigaya,676.9,11.2817,0.454545
+P0554,Shinjuku Gyoen Museum,M10,ShinjukuGyoemmae,321.6,5.36,0.517671
+P0555,Tokyo Cooking Class by MAIKOYA,G18,Tawaramachi,337.1,5.6183,0.517671
+P0556,Miyagi Michio Memorial Museum,T05,Kagurazaka,502.6,8.3767,0.516535
+P0557,Fishing Culture Museum,M11,YotsuyaSanchome,337.7,5.6283,0.516238
+P0558,都市緑化植物園,T13,Kiba,436.2,7.27,0.516211
+P0559,箕輪,Z14,Oshiage,370.6,6.1767,0.515934
+P0560,Tsukuda Machikado Museum,Y21,Tsukishima,396.1,6.6017,0.515625
+P0561,Sogetsu Art Museum,G04,AoyamaItchome,488.6,8.1433,0.514988
+P0562,Diet Front Garden,M14,KokkaiGijidomae,248.3,4.1383,0.513477
+P0563,Otome Road,Y10,HigashiIkebukuro,531.4,8.8567,0.512903
+P0564,Edogawa Rampo Memorial Center for Popular Culture Studies,F08,Kanamecho,423.1,7.0517,0.511746
+P0565,Mitsubishi Economic Research Archives,C13,Yushima,479.5,7.9917,0.510924
+P0566,Ōtaguro Park Memorial Hall,M01,Ogikubo,590.7,9.845,0.510496
+P0567,WILDMAGIC The Rainbow Farm,Y22,Toyosu,762.7,12.7117,0.509525
+P0568,Wadatsumi no Koe Museum,M21,HongoSanchome,510.4,8.5067,0.508162
+P0569,Senshu Bunko,Z06,Kudanshita,486.3,8.105,0.50765
+P0570,日本浮世絵博物館 東京,G19,Asakusa,304.6,5.0767,0.50765
+P0571,Place M - Red Photo Gallery,M10,ShinjukuGyoemmae,180.3,3.005,0.507628
+P0572,Kameido Umeyashiki,Z13,Kinshicho,1064.3,17.7383,0.507265
+P0573,Saint gobain,Z05,Hanzomon,291.8,4.8633,0.506947
+P0574,おしなりくんの家,Z14,Oshiage,202.7,3.3783,0.506947
+P0575,Kabukiza Gallery,H10,HigashiGinza,66.1,1.1017,0.505728
+P0576,Shitamachi museum annex [Yoshidaya],C14,Nezu,648.8,10.8133,0.504803
+P0577,Naruse Memorial Hall,F10,Zoshigaya,635.6,10.5933,0.504166
+P0578,ブレーキ博物館,Z13,Kinshicho,620.5,10.3417,0.454545
+P0579,Suga Shrine Onnazaka,M11,YotsuyaSanchome,430.9,7.1817,0.502807
+P0580,Shotaro Akiyama Photo Art Museum,G02,OmoteSando,498.6,8.31,0.500518
+P0581,Coaster Museum,T19,MinamiGyotoku,222.7,3.7117,0.498971
+P0582,富士見台,M07,NishiShinjuku,660.9,11.015,0.496827
+P0583,（株）秋華洞 Gallery Shukado,H09,Ginza,255.8,4.2633,0.496806
+P0584,Kanda-myōjin Museum,G14,Suehirocho,358.5,5.975,0.494593
+P0585,Tsumami Kanzashi Museum,T03,Takadanobaba,430.6,7.1767,0.494593
+P0586,Waseda Sports Museum,T04,Waseda,474.0,7.9,0.494593
+P0587,QUARK MUSEUM,H17,NakaOkachimachi,136.7,2.2783,0.492641
+P0588,Children's Mineral Museum,F14,KitaSando,562.1,9.3683,0.491985
+P0589,Kamiike Garden,Y14,Ichigaya,475.6,7.9267,0.489608
+P0590,Barrels of French Bourgogne wine,C03,MeijiJingumae,542.9,9.0483,0.454545
+P0591,Lotus flower,G16,Ueno,377.9,6.2983,0.454545
+P0592,アークガーデン,N05,RoppongiItchome,194.5,3.2417,0.486659
+P0593,Diet Front Garden,Y17,Sakuradamon,380.2,6.3367,0.486205
+P0594,Gaiemmae Sta.,F14,KitaSando,719.9,11.9983,0.484283
+P0595,Iris field,Z11,KiyosumiShirakawa,373.9,6.2317,0.418182
+P0596,Iris field,Z11,KiyosumiShirakawa,397.5,6.625,0.418182
+P0597,Amazake Yokocho,H14,Ningyocho,270.8,4.5133,0.481818
+P0598,The Edible Park OTEMACHI by grow,M18,Otemachi,86.3,1.4383,0.477922
+P0599,ギャザリアビオガーデン フジクラ 木場千年の森,T13,Kiba,480.9,8.015,0.477266
+P0600,Museum of Byōbu,Z14,Oshiage,587.3,9.7883,0.47619
+P0601,箱根マイセンアンティーク美術館東京,N02,Shirokanedai,1097.5,18.2917,0.4
+P0602,Otemachi One Garden,Z08,Otemachi,303.3,5.055,0.474133
+P0603,Ibasen Ukiyo-e Museum,G12,Mitsukoshimae,335.7,5.595,0.471698
+P0604,Museum of Contemporary Sculpture,H01,NakaMeguro,988.3,16.4717,0.471265
+P0605,Museum of modern sculpture,H01,NakaMeguro,985.1,16.4183,0.471265
+P0606,Nichido Art Gallery,H09,Ginza,94.3,1.5717,0.470083
+P0607,Daimyo Clock Museum,C14,Nezu,442.5,7.375,0.469953
+P0608,Tenri Gallery,M19,Awajicho,440.0,7.3333,0.467072
+P0609,Water wheel,T04,Waseda,767.7,12.795,0.4
+P0610,コーブガーデン,H21,MinamiSenju,937.3,15.6217,0.465764
+P0611,Red Gate,M21,HongoSanchome,431.7,7.195,0.465368
+P0612,Gallery Shin,G17,Inaricho,401.4,6.69,0.409091
+P0613,Memorial Peace Flame,H05,Kamiyacho,920.4,15.34,0.464438
+P0614,ギャラリー絵夢,N14,Komagome,87.4,1.4567,0.4
+P0615,みうらじろうギャラリー,H15,Kodemmacho,140.6,2.3433,0.463397
+P0616,Gallery 5610,G02,OmoteSando,195.1,3.2517,0.463126
+P0617,Japan Stationary Museum,H15,Kodemmacho,1151.5,19.1917,0.462281
+P0618,Peony Garden,G16,Ueno,500.8,8.3467,0.418182
+P0619,Gallery Hinoki,Z07,Jimbocho,210.6,3.51,0.4
+P0620,Gallery Tsubaki,G10,Kyobashi,192.4,3.2067,0.460764
+P0621,Akio Nagasawa Gallery,H10,HigashiGinza,174.6,2.91,0.459778
+P0622,食とくらしの小さな博物館,N02,Shirokanedai,833.5,13.8917,0.459084
+P0623,Hanawa Hokiichi Historical Museum,H02,Ebisu,849.6,14.16,0.458725
+P0624,White Gallery Tokyo,Y19,GinzaItchome,272.5,4.5417,0.4
+P0625,Chibata Etsuko Gallery,Y19,GinzaItchome,83.4,1.39,0.457596
+P0626,白白庵,G03,Gaiemmae,264.2,4.4033,0.457596
+P0627,Art Gallery M,G03,Gaiemmae,49.7,0.8283,0.455511
+P0628,Seigetsudo Art Gallery,G09,Ginza,159.2,2.6533,0.454592
+P0629,HANASAKA STAND,G10,Kyobashi,350.4,5.84,0.454545
+P0630,J-World Tokyo,Y10,HigashiIkebukuro,347.1,5.785,0.454545
+P0631,Japan Football Museum,M20,Ochanomizu,427.3,7.1217,0.454545
+P0632,ラムダ・ロケット用ランチャ,G16,Ueno,458.2,7.6367,0.454545
+P0633,Site of Ōoku,T08,Takebashi,399.0,6.65,0.453477
+P0634,Toraya Gallery,G05,AkasakaMitsuke,465.0,7.75,0.453327
+P0635,あかね画廊,H09,Ginza,65.9,1.0983,0.453104
+P0636,EBIHARA,H16,Akihabara,197.2,3.2867,0.4
+P0637,Palette Gallery,N04,AzabuJuban,216.9,3.615,0.452575
+P0638,Reijinsha gallery,G12,Mitsukoshimae,238.3,3.9717,0.452575
+P0639,Button Museum,H14,Ningyocho,741.9,12.365,0.452027
+P0640,Sekiguchi Museum of Art,T17,Kasai,700.1,11.6683,0.452027
+P0641,BANK GALLERY,F15,MeijiJingumae,229.7,3.8283,0.451459
+P0642,How House East,C15,Sendagi,254.6,4.2433,0.45087
+P0643,HAGUKUMI STAGE,F16,Shibuya,423.6,7.06,0.450649
+P0644,はぐくみSTAGE,F16,Shibuya,423.9,7.065,0.450649
+P0645,FlowerGarden,Z14,Oshiage,1052.4,17.54,0.448956
+P0646,桜丘の森,G01,Shibuya,401.8,6.6967,0.448564
+P0647,Gallery 蔵,C12,ShinOchanomizu,223.8,3.73,0.447535
+P0648,Kuroda Memorial Hall,C14,Nezu,705.0,11.75,0.447535
+P0649,Shimizu Corporation Historical Museum,T14,Toyocho,1111.9,18.5317,0.447535
+P0650,ないものわない,H19,Iriya,989.4,16.49,0.4
+P0651,トライアンフギャラリー,G11,Nihombashi,166.3,2.7717,0.445128
+P0652,創画廊,H10,HigashiGinza,213.1,3.5517,0.445128
+P0653,Mussshino Academia Musicae Musical Instrument Museum,F06,KotakeMukaihara,708.7,11.8117,0.442282
+P0654,Uni Art Gallery,G12,Mitsukoshimae,276.9,4.615,0.442282
+P0655,太平洋美術会,C16,NishiNippori,186.2,3.1033,0.442282
+P0656,Ebisu-dō Gallery,Z07,Jimbocho,83.7,1.395,0.437439
+P0657,Otho Gallery,H15,Kodemmacho,149.3,2.4883,0.437439
+P0658,アート☆アイガ,H12,Hatchobori,102.6,1.71,0.437439
+P0659,エビス・ギャラリーコウゲツ,H02,Ebisu,228.1,3.8017,0.437439
+P0660,銀座ワン,Y19,GinzaItchome,205.5,3.425,0.437439
+P0661,spaceyui,G03,Gaiemmae,398.9,6.6483,0.436391
+P0662,Koichi yamamura gallery,N04,AzabuJuban,294.9,4.915,0.435951
+P0663,おろちの松,N01,Meguro,717.4,11.9567,0.435951
+P0664,K's Green Gallery,C14,Nezu,681.8,11.3633,0.372727
+P0665,FUKAGAWA BANSHO GALLERY,Z11,KiyosumiShirakawa,574.4,9.5733,0.434419
+P0666,Art Front Gallery,H01,NakaMeguro,433.6,7.2267,0.433807
+P0667,UNICEF House,N02,Shirokanedai,1272.9,21.215,0.433001
+P0668,Antique Life,C01,YoyogiUehara,1248.1,20.8017,0.432816
+P0669,Gallery KUNIMATSU aoyama,G04,AoyamaItchome,296.0,4.9333,0.432467
+P0670,RED AND BLUE GALLERY,Y20,Shintomicho,252.8,4.2133,0.430382
+P0671,アートギャラリー 石,Y19,GinzaItchome,205.7,3.4283,0.430382
+P0672,鈴画廊,Y19,GinzaItchome,198.5,3.3083,0.430382
+P0673,Odaiba / Tokyo Joypolis and DECKS Area,Y22,Toyosu,3485.4,58.09,0.430377
+P0674,FAITH,M04,HigashiKoenji,583.7,9.7283,0.430323
+P0675,Super Labo,Z07,Jimbocho,315.5,5.2583,0.429106
+P0676,大怪店,M03,ShinKoenji,628.8,10.48,0.429106
+P0677,atelier artiste Allan west,C14,Nezu,503.9,8.3983,0.428238
+P0678,Kachidoki-Toyomi Historical Archive Museum,Y21,Tsukishima,970.1,16.1683,0.427975
+P0679,Shoichiro,G11,Nihombashi,226.9,3.7817,0.4
+P0680,EUKARYOTE,G03,Gaiemmae,384.1,6.4017,0.427786
+P0681,Maki Fine Art,T05,Kagurazaka,389.1,6.485,0.427319
+P0682,沖縄タウン,Mb03,Honancho,1252.1,20.8683,0.4273
+P0683,しおかぜ橋塩浜公園,T13,Kiba,869.6,14.4933,0.427034
+P0684,ギャラリー上田 / Gallery Ueda,G08,Shimbashi,333.4,5.5567,0.426839
+P0685,道のギャラリー,Y12,Edogawabashi,381.4,6.3567,0.372727
+P0686,Ryogoku Fireworks Museum,H14,Ningyocho,1202.3,20.0383,0.425918
+P0687,PARTY AREA(LOVE KINGDOM),Y22,Toyosu,746.1,12.435,0.425626
+P0688,Mita Arts Gallery,Z07,Jimbocho,76.8,1.28,0.425129
+P0689,Ishijima Atelier,Z01,Shibuya,509.0,8.4833,0.424754
+P0690,Kita City Furusato Nōka Taikenkan,N19,AkabaneIwabuchi,1381.7,23.0283,0.424079
+P0691,night Market,C01,YoyogiUehara,1300.9,21.6817,0.363636
+P0692,meee,T01,Nakano,645.4,10.7567,0.423597
+P0693,銀座レトロギャラリー MUSEE,Y19,GinzaItchome,375.1,6.2517,0.421683
+P0694,Nantenshi Gallery,G10,Kyobashi,148.8,2.48,0.421645
+P0695,ご近所ギャラリー吾郎,G14,Suehirocho,247.4,4.1233,0.421645
+P0696,東京女子医科大学史料室・吉岡彌生記念室,T04,Waseda,959.7,15.995,0.421645
+P0697,Gallery TEN,C14,Nezu,421.9,7.0317,0.420989
+P0698,Komiyama Tokyo G,C12,ShinOchanomizu,360.2,6.0033,0.420262
+P0699,ギャラリーR,M03,ShinKoenji,381.4,6.3567,0.420262
+P0700,Cat Street,F15,MeijiJingumae,167.5,2.7917,0.418182
+P0701,V88 Building,Y19,GinzaItchome,127.8,2.13,0.418182
+P0702,Aoyama Meguro,H01,NakaMeguro,599.6,9.9933,0.417856
+P0703,Pig Design,C01,YoyogiUehara,1316.0,21.9333,0.417252
+P0704,Shimokitazawa Gate,C01,YoyogiUehara,1304.4,21.74,0.417252
+P0705,Bekkō (Turtle Shell Crafts) Museum,G19,Asakusa,1136.4,18.94,0.417153
+P0706,Galerie Omotesando,C04,OmoteSando,353.3,5.8883,0.415009
+P0707,Nadar,Z02,OmoteSando,377.5,6.2917,0.372727
+P0708,林和美写真画廊,Z02,OmoteSando,376.2,6.27,0.372727
+P0709,アトリエFeng,M19,Awajicho,193.0,3.2167,0.410822
+P0710,Tokyo Kasei University Museum,N16,Oji,1451.5,24.1917,0.408765
+P0711,NEW ART LAB,G10,Kyobashi,308.0,5.1333,0.407033
+P0712,分類標本園,M23,Myogadani,759.8,12.6633,0.406926
+P0713,Gallery Mai,Y20,Shintomicho,336.5,5.6083,0.405194
+P0714,Sprout Curation,T05,Kagurazaka,391.3,6.5217,0.403109
+P0715,ULALA,C15,Sendagi,223.9,3.7317,0.4
+P0716,建設技術歴史展示室,Y22,Toyosu,874.2,14.57,0.4
+P0717,Artone,G02,OmoteSando,376.1,6.2683,0.372727
+P0718,Space 2*3,G12,Mitsukoshimae,379.0,6.3167,0.397856
+P0719,スペースパウゼ,Y13,Iidabashi,438.4,7.3067,0.397856
+P0720,Leather Industry Museum,H21,MinamiSenju,1254.5,20.9083,0.396103
+P0721,一客,C04,OmoteSando,304.8,5.08,0.394372
+P0722,情報学環オープンスタジオ,M21,HongoSanchome,530.6,8.8433,0.394372
+P0723,Meguro River Winter Illumination,N01,Meguro,1306.5,21.775,0.394019
+P0724,Yamamoto Bridge (North end of Meguro River Winter Illumination),N01,Meguro,1392.8,23.2133,0.394019
+P0725,Chuo Dori,G11,Nihombashi,153.3,2.555,0.392687
+P0726,三井文庫,T02,Ochiai,1222.6,20.3767,0.391612
+P0727,Brass,G19,Asakusa,589.9,9.8317,0.372727
+P0728,Galerie Adekat,Y12,Edogawabashi,719.4,11.99,0.318182
+P0729,ギャラリー鏤美,G03,Gaiemmae,420.0,7.0,0.38355
+P0730,Sho-rozan [Lu Shan],M22,Korakuen,278.6,4.6433,0.327273
+P0731,Yurakucho [Seiko] Mullion Musical Clock,M16,Ginza,115.9,1.9317,0.383223
+P0732,幽冥鐘,G19,Asakusa,1323.8,22.0633,0.380789
+P0733,OPPO,M02,MinamiAsagaya,745.1,12.4183,0.318182
+P0734,Omotesando Dori Winter Illumination,F15,MeijiJingumae,275.2,4.5867,0.376893
+P0735,Bonsai Trees,N02,Shirokanedai,298.5,4.975,0.327273
+P0736,Yoshizawa Baseball Museum,T23,NishiFunabashi,1407.2,23.4533,0.374459
+P0737,Suica ペンギンの広場,F13,ShinjukuSanchome,440.4,7.34,0.372727
+P0738,TAV gallery,M02,MinamiAsagaya,980.2,16.3367,0.318182
+P0739,Pedestrian Bridge,N16,Oji,131.4,2.19,0.364712
+P0740,Pedestrian Bridge,N16,Oji,198.8,3.3133,0.364712
+P0741,2549,T01,Nakano,938.2,15.6367,0.364154
+P0742,Kinshichodoujou,Z12,Sumiyoshi,535.6,8.9267,0.362281
+P0743,Main Gate,N12,Todaimae,586.6,9.7767,0.3
+P0744,Shinjuku Southern Terrace Winter Illumination,F13,ShinjukuSanchome,571.4,9.5233,0.355058
+P0745,カワウ,G16,Ueno,406.4,6.7733,0.3
+P0746,素人の乱12号店,M03,ShinKoenji,998.9,16.6483,0.346157
+P0747,さざれ石,M20,Ochanomizu,346.6,5.7767,0.3
+P0748,Century Museum,M21,HongoSanchome,467.7,7.795,0.3
+P0749,Tokyo Illumia Winter Illumination,G11,Nihombashi,163.3,2.7217,0.327273
+P0750,Daigo Fukuryu Maru Engine,Y24,ShinKiba,604.5,10.075,0.343289
+P0751,Electric Street,M08,Shinjuku,488.2,8.1367,0.3
+P0752,Hellogallerytokyo,M07,NishiShinjuku,1294.2,21.57,0.281818
+P0753,ストークビル道玄坂,Z01,Shibuya,489.3,8.155,0.330382
+P0754,Reflection of a Mineral House,Mb05,NakanoShimbashi,607.9,10.1317,0.327975
+P0755,Mosaic Street,M08,Shinjuku,195.0,3.25,0.327273
+P0756,Ningyōchō Dori,H14,Ningyocho,202.8,3.38,0.327273
+P0757,Takeshita Street,C03,MeijiJingumae,285.9,4.765,0.327273
+P0758,Zemaitis Museum,G13,Kanda,67.2,1.12,0.327273
+P0759,滝野川第二小学校花壇,N15,Nishigahara,1392.3,23.205,0.327273
+P0760,おあな,N11,Korakuen,509.6,8.4933,0.321645
+P0761,Up The Stairs,N01,Meguro,625.7,10.4283,0.3
+P0762,新木場のハーブガーデン,Y24,ShinKiba,95.6,1.5933,0.316038
+P0763,試衛館跡,T04,Waseda,846.1,14.1017,0.311563
+P0764,コナラ林,N01,Meguro,619.3,10.3217,0.3
+P0765,Rose Garden,M10,ShinjukuGyoemmae,637.2,10.62,0.263636
+P0766,バラ園,T08,Takebashi,521.8,8.6967,0.308765
+P0767,Shinhama Imperial Wild Duck Preserve,T20,Gyotoku,1171.9,19.5317,0.281818
+P0768,The Okura Tokyo garden,H06,ToranomonHills,322.3,5.3717,0.302434
+P0769,Cat Street,F15,MeijiJingumae,619.1,10.3183,0.3
+P0770,Daikanyama neighborhood,H01,NakaMeguro,577.9,9.6317,0.3
+P0771,Look St,M03,ShinKoenji,527.3,8.7883,0.3
+P0772,Miyashita Park North,Z01,Shibuya,384.4,6.4067,0.3
+P0773,Time capsule 1982-2032,H01,NakaMeguro,1491.5,24.8583,0.3
+P0774,VR忍者道場,G13,Kanda,318.5,5.3083,0.3
+P0775,外交史料館別館,N05,RoppongiItchome,426.0,7.1,0.3
+P0776,MASATAKA CONTEMPORARY,G11,Nihombashi,228.0,3.8,0.296914
+P0777,NTT東日本関東病院ふれあいガーデン,N02,Shirokanedai,623.5,10.3917,0.296103
+P0778,御亭山,G08,Shimbashi,1057.8,17.63,0.29441
+P0779,Fujimiyama Hill,G08,Shimbashi,1149.8,19.1633,0.29299
+P0780,Dome Garden,Z14,Oshiage,245.5,4.0917,0.290909
+P0781,Fujidana,N06,TameikeSanno,222.9,3.715,0.290909
+P0782,月見台,Y22,Toyosu,1034.9,17.2483,0.245455
+P0783,parabolica-bis,G18,Tawaramachi,1249.4,20.8233,0.281818
+P0784,オノマトペ,M02,MinamiAsagaya,1476.7,24.6117,0.281818
+P0785,カタ/コンベ,T01,Nakano,1208.5,20.1417,0.281818
+P0786,Symbol tree,G19,Asakusa,736.6,12.2767,0.245455
+P0787,Gallery 2104,G04,AoyamaItchome,282.9,4.715,0.279761
+P0788,Tokyo Bay Lookout,G08,Shimbashi,1397.4,23.29,0.209091
+P0789,ホグワーツ橋,F04,Heiwadai,1475.4,24.59,0.264149
+P0790,西田小学校郷土資料展示室,M01,Ogikubo,1062.5,17.7083,0.262608
+P0791,Yokozuna dohyouiri monument,H15,Kodemmacho,1325.3,22.0883,0.261666
+P0792,Cheepa’s Gallery,H10,HigashiGinza,390.3,6.505,0.254133
+P0793,Gallery Mosto,G03,Gaiemmae,324.1,5.4017,0.252488
+P0794,ギャラリーniue,Mb03,Honancho,571.0,9.5167,0.248564
+P0795,Coma,N14,Komagome,585.6,9.76,0.239827
+P0796,Nanatsu Gallery,C05,Nogizaka,686.6,11.4433,0.239827
+P0797,三代豊国五渡亭園,Z12,Sumiyoshi,1206.4,20.1067,0.234419
+P0798,駒止石,G18,Tawaramachi,1359.6,22.66,0.23422
+P0799,史跡 駒止井戸,G18,Tawaramachi,1357.8,22.63,0.226244
+P0800,Acro City,C17,Machiya,1060.3,17.6717,0.209091
+P0801,Pebble Beach,G08,Shimbashi,1367.1,22.785,0.172727

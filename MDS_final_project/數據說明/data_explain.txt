@@ -1,0 +1,9 @@
+CSV 檔名	內容	用途
+attractions.csv	801 筆景點 / POI 資料，包含景點 ID、名稱、經緯度、最近車站、距離最近車站的距離、pressure score 等	作為景點 / POI 參考資料庫。主要用途不是限制使用者只能選這些景點，而是用來提供景點對車站可能造成的人潮壓力參考
+attraction_station_access.csv	每個景點對應的最近車站、距離最近車站的距離、步行時間、pressure score	用來計算「景點 ↔ 最近捷運站」這段步行接駁時間。步行時間用 distance_to_station_m / 60 計算，假設步行速度為 1 m/s
+station_info.csv	Tokyo Metro 車站基本資料，例如車站 ID、車站名稱、路線、經緯度、營運公司	作為車站資料主表，用來連接景點、路線、班次與擁擠度資料
+station_crowd_by_time.csv	各車站在不同時段的官方 heatmap 擁擠等級，以及正規化後的擁擠分數	用來建立車站—時段的 crowd risk proxy。注意它不是實際逐時人數，而是官方 1–6 分 heatmap 轉成的擁擠風險分數
+train_frequency_by_time.csv	各車站、路線、方向、時段的列車班次數、平均等待時間與班次頻率分數	用來估算不同時段的等車時間，也可以輔助判斷某時段的交通供給量
+weather_daily.csv	每日天氣資料，例如平均氣溫、最高氣溫、最低氣溫、降雨量、濕度、天氣狀態、下雨嚴重程度、炎熱嚴重程度	目前只是每日層級天氣資料，不是逐時天氣。主要可用來調整當天步行、等待、擁擠風險的權重，或作為行程提醒
+README.md	資料夾說明文件	說明目前資料是 static reference data，以及 pressure_score 的定義與用途
+data_quality_report.md	資料品質報告	記錄每個檔案的來源、欄位對應、NA 情況、哪些資料是 proxy、哪些欄位是計算出來的

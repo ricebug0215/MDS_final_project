@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mds-final-project.local/schemas/trip_request.json",
+  "title": "TripOptimizationRequest",
+  "description": "Request body sent from the UI to the OR itinerary optimizer. The OR model uses this payload together with static files under data/OR_data/ to compute an attraction visit order and metro legs.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "trip_date",
+    "day_type",
+    "start_time",
+    "end_time",
+    "start_station_id",
+    "end_station_id",
+    "attractions",
+    "budget_yen",
+    "preferences"
+  ],
+  "properties": {
+    "request_id": {
+      "type": "string",
+      "description": "Optional client-generated id for logging, tracing, and pairing with the OR response.",
+      "examples": ["ui-20250315-093012-abc123"]
+    },
+    "trip_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Travel date in ISO 8601 (YYYY-MM-DD). Used to look up weather_daily and daily-level rain/heat adjustments.",
+      "examples": ["2025-03-15"]
+    },
+    "day_type": {
+      "type": "string",
+      "enum": ["weekday", "holiday"],
+      "description": "Matches day_type in train_frequency_by_time.csv and station_crowd_by_time.csv. Use holiday for weekends and public holidays when those tables use the holiday profile."
+    },
+    "start_time": {
+      "type": "string",
+      "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$",
+      "description": "Trip departure time in 24-hour HH:MM local time. Used to map time slots for wait time and crowd penalties.",
+      "examples": ["09:00"]
+    },
+    "end_time": {
+      "type": "string",
+      "pattern": "^([01]\\d|2[0-3]):[0-5]\\d$",
+      "description": "Trip must finish by this time (HH:MM). OR treats this as a hard time budget together with per-attraction stay minutes.",
+      "examples": ["18:00"]
+    },
+    "start_station_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z]{1,3}\\d{1,3}$",
+      "description": "Origin station code (e.g. G16). Must exist in station_pair_routes / station_info.",
+      "examples": ["G16"]
+    },
+    "end_station_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z]{1,3}\\d{1,3}$",
+      "description": "Return or final station code. Can equal start_station_id for round-trip day tours.",
+      "examples": ["G16"]
+    },
+    "attractions": {
+      "type": "array",
+      "description": "User-selected attractions for this run. The OR model optimizes visit order over this set; it does not search the full 801-POI catalog unless allow_skip_attractions is enabled.",
+      "minItems": 1,
+      "maxItems": 20,
+      "items": {
+        "$ref": "#/$defs/selected_attraction"
+      }
+    },
+    "budget_yen": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Maximum total metro fare (JPY) for station-to-station legs, excluding optional non-metro costs.",
+      "examples": [2000]
+    },
+    "preferences": {
+      "$ref": "#/$defs/preferences"
+    }
+  },
+  "$defs": {
+    "selected_attraction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["attraction_id", "stay_minutes"],
+      "properties": {
+        "attraction_id": {
+          "type": "string",
+          "pattern": "^P\\d{4}$",
+          "description": "Attraction id from attractions.csv (e.g. P0001).",
+          "examples": ["P0001"]
+        },
+        "stay_minutes": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 480,
+          "description": "Planned on-site stay duration at this attraction in minutes.",
+          "examples": [90]
+        },
+        "must_visit": {
+          "type": "boolean",
+          "default": true,
+          "description": "If true, the attraction cannot be dropped when allow_skip_attractions is enabled."
+        }
+      }
+    },
+    "preferences": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "time_weight",
+        "fare_weight",
+        "crowd_weight"
+      ],
+      "properties": {
+        "time_weight": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Weight for total travel + wait time in the objective. Weights are typically normalized to sum to 1."
+        },
+        "fare_weight": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Weight for total metro fare in the objective."
+        },
+        "crowd_weight": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Weight for station crowd proxy (station_crowd_by_time.crowd_score) along the route."
+        },
+        "avoid_rain": {
+          "type": "boolean",
+          "default": false,
+          "description": "If true, increase walking and outdoor-attraction penalties using weather_daily on trip_date (rain_severity, rain_mm)."
+        },
+        "rain_penalty_weight": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "default": 0.15,
+          "description": "Extra objective weight applied when avoid_rain is true. Ignored when avoid_rain is false."
+        },
+        "max_transfers": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 10,
+          "default": 3,
+          "description": "Maximum allowed transfers per metro leg (from station_pair_routes.transfer_count)."
+        },
+        "include_wait_time": {
+          "type": "boolean",
+          "default": true,
+          "description": "If true, add avg_wait_time_min from train_frequency_by_time.csv to leg costs."
+        },
+        "allow_skip_attractions": {
+          "type": "boolean",
+          "default": false,
+          "description": "If true, OR may drop non-must_visit attractions when time or budget is infeasible."
+        },
+        "prefer_indoor_on_rain": {
+          "type": "boolean",
+          "default": true,
+          "description": "When avoid_rain is true and rain is non-trivial, penalize outdoor categories (park, shrine outdoor areas, etc.). Exact category mapping is handled in the OR preprocessor."
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "request_id": "demo-001",
+      "trip_date": "2025-03-15",
+      "day_type": "holiday",
+      "start_time": "09:00",
+      "end_time": "18:00",
+      "start_station_id": "G16",
+      "end_station_id": "G16",
+      "attractions": [
+        { "attraction_id": "P0001", "stay_minutes": 90, "must_visit": true },
+        { "attraction_id": "P0042", "stay_minutes": 60, "must_visit": true },
+        { "attraction_id": "P0103", "stay_minutes": 45, "must_visit": true }
+      ],
+      "budget_yen": 2000,
+      "preferences": {
+        "time_weight": 0.5,
+        "fare_weight": 0.2,
+        "crowd_weight": 0.3,
+        "avoid_rain": true,
+        "rain_penalty_weight": 0.15,
+        "max_transfers": 3,
+        "include_wait_time": true,
+        "allow_skip_attractions": false,
+        "prefer_indoor_on_rain": true
+      }
+    }
+  ]
+}
