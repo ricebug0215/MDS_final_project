@@ -108,7 +108,10 @@ minimize    Σ_{i∈V} Σ_{j∈V, j≠i}  c_ij · x_ij
 對每一對節點 `(i, j)`，預先計算：
 
 ```text
-c_ij = w_time × T_ij + w_fare × fare_ij + w_crowd × crowd_ij × 60 + rain_penalty_ij
+c_ij = w_time × (T_ij + transfer_soft_penalty_ij)
+       + w_fare × fare_ij
+       + w_crowd × crowd_ij × 60
+       + rain_penalty_ij
 ```
 
 **`T_ij` 是什麼？**  
@@ -119,19 +122,19 @@ c_ij = w_time × T_ij + w_fare × fare_ij + w_crowd × crowd_ij × 60 + rain_pen
 | 項 | 內容 |
 |----|------|
 | `walk_ij` | 景點與最近捷運站之間的步行（下雨時會放大） |
-| `metro_ij` | 捷運車上 + 轉乘時間，以及下方的**超轉乘軟懲罰** |
+| `metro_ij` | 從 `station_graph_edges.csv` 搜出的捷運車上 + 站內轉乘時間 |
 | `wait_ij` | 依時段估計的等車時間（`train_frequency_by_time`） |
 | `outdoor_ij` | 雨天且目的地為戶外景點時的額外分鐘（目前約 15 分） |
 
 **什麼是「超轉乘軟懲罰」？**
 
-- `tc_ij`：該段捷運路線的轉乘次數（來自 `station_pair_routes.transfer_count`）
+- `tc_ij`：該段捷運路線的轉乘次數（來自 `station_graph_edges.csv` 搜出的路線）
 - `K`：使用者設定的 `max_transfers`（例如 3，代表「希望不要轉太多趟」）
 
-若實際轉乘次數 **超過** `K`，程式**不會**禁止這條路（那是硬限制），而是在 `metro_ij` 上**多加時間**：
+若實際轉乘次數 **超過** `K`，程式**不會**禁止這條路（那是硬限制），而是在目標函數中加入額外成本：
 
 ```text
-額外分鐘 = 12 × max(0, tc_ij − K)
+transfer_soft_penalty_ij = 12 × max(0, tc_ij − K)
 ```
 
 | 情況 | 額外懲罰 |
@@ -140,22 +143,25 @@ c_ij = w_time × T_ij + w_fare × fare_ij + w_crowd × crowd_ij × 60 + rain_pen
 | `tc_ij = 4`, `K = 3` | 12 分鐘 |
 | `tc_ij = 5`, `K = 3` | 24 分鐘 |
 
-這稱為 **軟性（soft）** 限制：路仍可走，但 `T_ij` 變大 → `c_ij` 變高 → TSP 傾向選轉乘較少的順序。`12` 為實作常數（非官方轉乘時間），見 `or_model/cost_matrix.py`。
+這稱為 **軟性（soft）** 限制：路仍可走，但 `c_ij` 變高 → TSP 傾向選轉乘較少的順序。`12` 為實作常數（非官方轉乘時間），見 `or_model/cost_matrix.py`。顯示用的 `metro_time_min` 保留為實際車上 + 站內轉乘時間，不再包含此偏好懲罰。
+
+此外，當使用者勾選「減少轉乘次數」時，站到站 route search 會對每條 transfer edge 額外加權，讓同一組 OD 可能選出與一般模式不同、轉乘較少但可能較久的 `route_path`。
 
 其中 `T_ij` 再分解為：
 
 ```text
 T_ij = walk_ij + metro_ij + wait_ij + outdoor_ij
 
-metro_ij = train_ij + transfer_ij + 12 × max(0, tc_ij − K)    ← 超轉乘軟懲罰
+metro_ij = train_ij + transfer_ij
 ```
 
 | 符號 | 意義 | 單位 / 範圍 |
 |------|------|-------------|
-| `T_ij` | 從 i 到 j 的總移動時間（含步行、捷運、等車、戶外懲罰、轉乘軟懲罰） | 分鐘 |
+| `T_ij` | 從 i 到 j 的總移動時間（含步行、捷運、等車、戶外懲罰） | 分鐘 |
 | `fare_ij` | 該段捷運票價 | 日圓 |
 | `crowd_ij` | 起迄站平均擁擠分數（proxy） | 0～1 |
 | `rain_penalty_ij` | 雨天額外懲罰（`avoid_rain` 時） | 加在 `c_ij` |
+| `transfer_soft_penalty_ij` | 超過 `max_transfers` 的轉乘偏好懲罰 | 加在 `c_ij` |
 | `w_time, w_fare, w_crowd` | 使用者偏好權重 | `preferences` |
 | `tc_ij` | 該段轉乘次數 | 整數 |
 | `K` | `max_transfers` 偏好上限 | 整數 |
@@ -173,7 +179,7 @@ metro_ij = train_ij + transfer_ij + 12 × max(0, tc_ij − K)    ← 超轉乘�
 
 目前程式在 `avoid_rain: true` 時**同時**實作兩類：`rain_mult` 與 `outdoor_ij` 進入 `T_ij`，另以 `rain_penalty_ij` 對步行不便再加一項（見 `cost_matrix.py`）。設計上 `rain_penalty_ij` 代表「主觀不便」的額外成本；若僅希望**時間型**雨天影響，理論上應令 `rain_penalty_ij = 0` 以避免與已放大的 `walk_ij` 重複計價（double counting）。**現版尚未開關分離兩者**，報告時應說明此為簡化建模，屬未來可改進項目。
 
-`T_ij` includes walking time, metro time, waiting time, transfer soft penalty, and outdoor rain penalty when applicable.
+`T_ij` includes walking time, metro time, waiting time, and outdoor rain penalty when applicable.
 
 `c_ij` 由**時間、票價、擁擠、下雨**四類成本加權加總而成；TSP 比較的是這個單一數值，而非單獨最小化時間或票價。
 
@@ -238,11 +244,11 @@ metro_ij = train_ij + transfer_ij + 12 × max(0, tc_ij − K)    ← 超轉乘�
 
 - Each attraction is connected to its **nearest station** only, via `attraction_station_access.csv`（hub-and-spoke）.
 - Walking speed is assumed to be approximately **1 m/s**（`access_walk_time_min = distance_m / 60`）.
-- Station-to-station travel time is **static**（`station_pair_routes.csv`），不隨行程推進逐段更新。
+- Station-to-station travel time is computed from the static `station_graph_edges.csv` graph at request time；不隨行程推進逐段更新。
 - Waiting time is estimated from `train_frequency_by_time.csv` using the **request `start_time`** mapped to one `time_slot`；**不會**在每段 leg 後動態更新時段。
 - Crowd score is a **proxy**（official heatmap 1–6 正規化），not real-time passenger count；缺值視為 0。
 - Weather is **daily**（`weather_daily.csv`），not hourly；rain mainly affects walking multiplier and outdoor attraction penalty.
-- Transfer limit `max_transfers` is a **soft penalty**（每超過 1 次轉乘 +12 分鐘），not a hard ban on arcs.
+- Transfer preference uses graph route search plus a **soft penalty**（每超過 `max_transfers` 1 次轉乘，objective +12 分鐘等價成本），not a hard ban on arcs.
 - **All selected attractions must be visited**；the model does not skip attractions or choose a subset.
 - No integration with **real-time transit API** or **real-time weather API**.
 - Some OD rows or fare entries are simplified or precomputed offline for demonstration.
@@ -261,15 +267,15 @@ metro_ij = train_ij + transfer_ij + 12 × max(0, tc_ij − K)    ← 超轉乘�
 | 靜態參考 | `attractions.csv` | 景點基本資料（~801 筆候選） |
 | 靜態參考 | `attraction_station_access.csv` | 景點與最近車站、步行時間、壓力分數 |
 | 靜態參考 | `station_info.csv` | 車站基本資料（Tokyo Metro 為主） |
-| 加工矩陣 | `station_pair_routes.csv` | 站對站最短路：時間、轉乘、`route_path`（84,390 列） |
-| 加工矩陣 | `station_pair_fares.csv` | 站對站票價（與 routes 對齊） |
+| 加工矩陣 | `station_pair_routes.csv` | 站對站預算路線：時間、轉乘、`route_path`（目前作為 fallback） |
+| 加工矩陣 | `station_pair_fares.csv` | 站對站票價 |
 | Proxy / 時段 | `train_frequency_by_time.csv` | 各時段等車時間估計 |
 | Proxy / 時段 | `station_crowd_by_time.csv` | 各時段車站擁擠分數（非實際人流） |
 | 情境 / 每日 | `weather_daily.csv` | 每日雨量、炎熱等（非逐時 API） |
-| 進階 | `station_graph_edges.csv` | 鄰接圖（相鄰站 + 轉乘邊） |
+| Runtime graph | `station_graph_edges.csv` | 鄰接圖（相鄰站 + 轉乘邊），供 request-time route search 使用 |
 
 - **Static reference**：景點、車站、接入距離。  
-- **Precomputed pairwise matrices**：`station_pair_routes` / `station_pair_fares` 供 OR 直接查表建 `c_ij`。  
+- **Route graph + fare matrix**：`station_graph_edges` 供 OR 動態搜尋每段 `route_path`；`station_pair_fares` 供票價查表。
 - **Proxy / simplified**：擁擠 heatmap、等車估計、部分票價為規則計算。  
 - **Not used in runtime**：無即時大眾運輸或即時天氣 API。
 
@@ -292,15 +298,15 @@ Some data fields are simplified or approximated for modeling and demonstration p
 
 雖然本問題可以用二元變數 `x_ij` 建成 **MILP** 並交給 **Gurobi** 或 **OR-Tools** 求解，目前實作採**兩階段**設計：
 
-1. **Cost construction**：`cost_matrix.py` 建立 pairwise `c_ij`  
-2. **Route optimization**：`tsp_solver.py` 解 Open TSP  
+1. **Route search + cost construction**：`data_loader.py` / `cost_matrix.py` 依偏好搜尋每段 OD route，並建立 pairwise `c_ij`
+2. **Visit-order optimization**：`tsp_solver.py` 解 Open TSP
 
 | 選定景點數 | 方法 | 說明 |
 |------------|------|------|
 | ≤ 8（中間節點） | 精確枚舉 | `itertools.permutations`，保證該規模下最優 |
 | > 8 | 啟發式 | 最近鄰 + 2-opt |
 
-這是完整的 **OR formulation**，只是 solver implementation 較輕量。流程為：**先建立 pairwise cost matrix，再解組合最佳化**——不是單純依距離排序。若課程或專案要求，可將同一 formulation 改寫為 Gurobi MILP，輸入輸出介面（`trip_request` JSON）可沿用。
+這是完整的 **OR formulation**，只是 solver implementation 較輕量。流程為：**先根據偏好搜尋 OD route 並建立 pairwise cost matrix，再解組合最佳化**——不是單純依距離排序。若課程或專案要求，可將同一 formulation 改寫為 Gurobi MILP，輸入輸出介面（`trip_request` JSON）可沿用。
 
 **未使用 Gurobi / CPLEX / OR-Tools**（目前依賴 `numpy`、`pandas` 即可執行 demo）。
 
@@ -348,6 +354,7 @@ result = optimize_trip({
         "crowd_weight": 0.3,
         "avoid_rain": True,
         "max_transfers": 3,
+        "route_transfer_penalty_min": 0,
     },
 })
 ```
@@ -355,7 +362,7 @@ result = optimize_trip({
 | 步驟 | 檔案 | 函數 |
 |------|------|------|
 | 載入 CSV | `or_model/data_loader.py` | `ORDataStore.load()` |
-| 建 `c_ij` | `or_model/cost_matrix.py` | `build_problem()` |
+| 搜尋 OD route + 建 `c_ij` | `or_model/data_loader.py` / `or_model/cost_matrix.py` | `shortest_graph_route()` / `build_problem()` |
 | 解 TSP | `or_model/tsp_solver.py` | `solve_tsp()` |
 | 輸出與檢查 | `or_model/optimizer.py` | `optimize_trip()` |
 
@@ -497,17 +504,18 @@ Prompt 應要求：**解釋 OR 輸出的順序，不要自行改寫 `ordered_att
 - [ ] Attraction selection from full catalog or skipping attractions
 - [ ] Formal MILP solver（Gurobi / OR-Tools）with `x_ij` variables
 - [ ] `schemas/trip_response.json`
-- [ ] More realistic walking and transfer modeling；configurable transfer penalty
+- [x] Dynamic transfer-aware route search；configurable route transfer penalty
+- [ ] More realistic walking model
 
 ---
 
 ## 常見問題（FAQ）
 
 **Q: 為什麼 `station_info` 186 站，`station_pair_routes` 卻 291 站？**  
-A: Routes 涵蓋較大路網；站碼能否路由以 **routes 表** 為準。
+A: Routes / graph 涵蓋較大路網；站碼能否路由以 `station_graph_edges.csv` 為優先，`station_pair_routes.csv` 作為 fallback。
 
 **Q: `max_transfers` 的 +12 分鐘是什麼？**  
-A: 超過偏好轉乘次數時的**軟性懲罰**（啟發常數，非官方轉乘時間）。
+A: 超過偏好轉乘次數時的**軟性 objective 懲罰**（啟發常數，非官方轉乘時間），不會加到顯示用的實際地鐵時間。
 
 **Q: 會隨行程更新等車/擁擠的時段嗎？**  
 A: 目前否；全程使用 `start_time` 對應的單一 `time_slot`。

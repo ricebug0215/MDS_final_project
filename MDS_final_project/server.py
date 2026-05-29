@@ -138,6 +138,7 @@ async def plan_trip(payload: dict):
             "avoid_rain": payload.get("preferences", {}).get("rainy_day", True),
             "rain_penalty_weight": 0.5 if payload.get("preferences", {}).get("rainy_day") else 0.15,
             "max_transfers": 1 if payload.get("preferences", {}).get("few_transfers") else 3,
+            "route_transfer_penalty_min": 24.0 if payload.get("preferences", {}).get("few_transfers") else 0.0,
             "include_wait_time": True,
             "allow_skip_attractions": False,
             "prefer_indoor_on_rain": payload.get("preferences", {}).get("rainy_day", True),

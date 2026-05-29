@@ -72,6 +72,7 @@ def optimize_trip(
                 "crowd_score": round(leg.crowd_score, 4),
                 "rain_penalty_min": round(leg.rain_penalty_min, 2),
                 "outdoor_penalty_min": round(leg.outdoor_penalty_min, 2),
+                "transfer_penalty_min": round(leg.transfer_penalty_min, 2),
                 "total_leg_time_min": round(leg.total_time_min, 2),
                 "route_path": leg.route_path,
             }

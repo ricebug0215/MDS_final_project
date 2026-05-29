@@ -24,6 +24,7 @@ class LegDetail:
     crowd_score: float
     rain_penalty_min: float
     outdoor_penalty_min: float
+    transfer_penalty_min: float
     route_path: str
     objective_cost: float
 
@@ -108,6 +109,9 @@ def build_problem(
     w_fare = float(prefs.get("fare_weight", 0.2))
     w_crowd = float(prefs.get("crowd_weight", 0.3))
     max_transfers = int(prefs.get("max_transfers", 3))
+    route_transfer_penalty = float(
+        prefs.get("route_transfer_penalty_min", 20.0 if max_transfers <= 1 else 0.0)
+    )
     include_wait = bool(prefs.get("include_wait_time", True))
     avoid_rain = bool(prefs.get("avoid_rain", False))
     prefer_indoor = bool(prefs.get("prefer_indoor_on_rain", True))
@@ -163,6 +167,7 @@ def build_problem(
                 day_type=day_type,
                 time_slot=time_slot,
                 max_transfers=max_transfers,
+                route_transfer_penalty=route_transfer_penalty,
                 include_wait=include_wait,
                 rain_mult=rain_mult,
                 rain_active=rain_active,
@@ -218,6 +223,7 @@ def _leg_between(
     day_type: str,
     time_slot: str,
     max_transfers: int,
+    route_transfer_penalty: float,
     include_wait: bool,
     rain_mult: float,
     rain_active: bool,
@@ -253,16 +259,27 @@ def _leg_between(
         metro_time = 0.0
         fare = 0
     else:
-        route = route_lookup.get((from_station, to_station))
-        if route is None:
-            return None
+        graph_route = data.shortest_graph_route(
+            from_station, to_station, transfer_penalty_min=route_transfer_penalty
+        )
+        if graph_route is not None:
+            transfer_count = graph_route.transfer_count
+            metro_time = (
+                graph_route.in_train_time_min + graph_route.transfer_time_min
+            )
+            route_path = graph_route.route_path
+        else:
+            route = route_lookup.get((from_station, to_station))
+            if route is None:
+                return None
 
-        transfer_count = int(route.transfer_count)
-        metro_time = float(route.in_train_time_min) + float(route.transfer_time_min)
-        if transfer_count > max_transfers:
-            metro_time += 12.0 * (transfer_count - max_transfers)
+            transfer_count = int(route.transfer_count)
+            metro_time = float(route.in_train_time_min) + float(
+                route.transfer_time_min
+            )
+            route_path = str(route.route_path)
+
         fare = int(fare_lookup.get((from_station, to_station), 0))
-        route_path = str(route.route_path)
         if metro_time <= 0.0 and fare <= 0:
             return None
 
@@ -275,10 +292,18 @@ def _leg_between(
     ) / 2.0
 
     walk_time = walk_out + walk_in
+    transfer_soft_penalty = 12.0 * max(0, transfer_count - max_transfers)
     rain_penalty = max(0.0, rain_mult - 1.0) * walk_time * rain_weight * 60.0
 
     objective = (
-        w_time * (walk_time + metro_time + wait_time + outdoor_penalty)
+        w_time
+        * (
+            walk_time
+            + metro_time
+            + wait_time
+            + outdoor_penalty
+            + transfer_soft_penalty
+        )
         + w_fare * fare
         + w_crowd * crowd * 60.0
         + rain_penalty
@@ -297,6 +322,7 @@ def _leg_between(
         crowd_score=crowd,
         rain_penalty_min=rain_penalty,
         outdoor_penalty_min=outdoor_penalty,
+        transfer_penalty_min=transfer_soft_penalty,
         route_path=route_path,
         objective_cost=objective,
     )
