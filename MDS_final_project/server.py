@@ -37,6 +37,38 @@ def find_attraction_id(name: str) -> str:
     
     return None
 
+def find_station_id(name: str) -> str:
+    """嘗試根據名稱尋找對應的 station_id，支援簡單的中英翻譯"""
+    if not name: return "G16"
+    # 常見站名中英對照
+    zh_to_en = {
+        "上野": "Ueno", "新宿": "Shinjuku", "東京": "Tokyo", 
+        "池袋": "Ikebukuro", "澀谷": "Shibuya", "渋谷": "Shibuya",
+        "淺草": "Asakusa", "銀座": "Ginza", "秋葉原": "Akihabara",
+        "六本木": "Roppongi", "表參道": "OmoteSando"
+    }
+    
+    # 嘗試替換中文為英文
+    search_name = name
+    for zh, en in zh_to_en.items():
+        if zh in search_name:
+            search_name = search_name.replace(zh, en)
+            break
+            
+    search_name_lower = search_name.lower()
+    
+    # 精確匹配
+    exact_match = station_info_df[station_info_df['station_name'].str.lower() == search_name_lower]
+    if not exact_match.empty:
+        return exact_match.iloc[0]['station_id']
+        
+    # 部分匹配
+    partial_match = station_info_df[station_info_df['station_name'].str.lower().str.contains(search_name_lower, na=False)]
+    if not partial_match.empty:
+        return partial_match.iloc[0]['station_id']
+        
+    return "G16" # 找不到則預設給上野 (G16)
+
 @app.post("/api/plan")
 async def plan_trip(payload: dict):
     print("收到前端傳來的資料：", payload)
@@ -80,26 +112,29 @@ async def plan_trip(payload: dict):
             {"attraction_id": "P0008", "stay_minutes": 60, "must_visit": True},
         ]
         
+    start_station_id = find_station_id(payload.get("start_point", "上野"))
+    end_station_id = find_station_id(payload.get("end_point", "新宿"))
+        
     full_request = {
         "request_id": "api-001",
         "trip_date": "2024-06-15",
         "day_type": "holiday",
-        "start_time": "09:00",
-        "end_time": "18:00",
-        "start_station_id": "G16",  # 為了簡化，預設起終點為同一站，可依前端傳入修改
-        "end_station_id": "G16",
+        "start_time": payload.get("start_time", "10:00"),
+        "end_time": payload.get("end_time", "19:00"),
+        "start_station_id": start_station_id,
+        "end_station_id": end_station_id,
         "attractions": attractions,
         "budget_yen": payload.get("budget_yen", 2500),
         "preferences": {
-            "time_weight": payload.get("preferences", {}).get("time_weight", 0.5),
-            "fare_weight": payload.get("preferences", {}).get("fare_weight", 0.2),
-            "crowd_weight": 0.3,
-            "avoid_rain": True,
-            "rain_penalty_weight": 0.15,
-            "max_transfers": 3,
+            "time_weight": 0.2 if payload.get("preferences", {}).get("lowest_cost") else (0.8 if payload.get("preferences", {}).get("shortest_time") else 0.5),
+            "fare_weight": 0.8 if payload.get("preferences", {}).get("lowest_cost") else (0.2 if payload.get("preferences", {}).get("shortest_time") else 0.5),
+            "crowd_weight": 0.8 if payload.get("preferences", {}).get("avoid_crowd") else 0.3,
+            "avoid_rain": payload.get("preferences", {}).get("rainy_day", True),
+            "rain_penalty_weight": 0.5 if payload.get("preferences", {}).get("rainy_day") else 0.15,
+            "max_transfers": 1 if payload.get("preferences", {}).get("few_transfers") else 3,
             "include_wait_time": True,
             "allow_skip_attractions": False,
-            "prefer_indoor_on_rain": True,
+            "prefer_indoor_on_rain": payload.get("preferences", {}).get("rainy_day", True),
         }
     }
     
