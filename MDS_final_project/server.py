@@ -40,20 +40,26 @@ def find_attraction_id(name: str) -> str:
 def find_station_id(name: str) -> str:
     """嘗試根據名稱尋找對應的 station_id，支援簡單的中英翻譯"""
     if not name: return "G16"
+    
+    # 移除常見的後綴
+    clean_name = name.replace("車站", "").replace("站", "").strip()
+    
     # 常見站名中英對照
     zh_to_en = {
         "上野": "Ueno", "新宿": "Shinjuku", "東京": "Tokyo", 
         "池袋": "Ikebukuro", "澀谷": "Shibuya", "渋谷": "Shibuya",
         "淺草": "Asakusa", "銀座": "Ginza", "秋葉原": "Akihabara",
-        "六本木": "Roppongi", "表參道": "OmoteSando"
+        "六本木": "Roppongi", "表參道": "OmoteSando", "品川": "Shimbashi", # 提供相近的替代
+        "原宿": "MeijiJingumae", "惠比壽": "Ebisu", "中目黑": "NakaMeguro",
+        "高田馬場": "Takadanobaba", "飯田橋": "Iidabashi", "大手町": "Otemachi",
+        "日本橋": "Nihombashi", "赤坂": "Akasaka", "霞關": "Kasumigaseki",
+        "豐洲": "Toyosu", "淺草橋": "Asakusa", "西日暮里": "NishiNippori",
+        "日暮里": "NishiNippori", "後樂園": "Korakuen", "押上": "Oshiage",
+        "清澄白河": "KiyosumiShirakawa", "月島": "Tsukishima"
     }
     
-    # 嘗試替換中文為英文
-    search_name = name
-    for zh, en in zh_to_en.items():
-        if zh in search_name:
-            search_name = search_name.replace(zh, en)
-            break
+    # 嘗試精確替換中文為英文
+    search_name = zh_to_en.get(clean_name, clean_name)
             
     search_name_lower = search_name.lower()
     
