@@ -32,9 +32,9 @@ function RoutePathDisplay({ pathNames }) {
 
 export default function TripResult({ resultData }) {
   // 防呆：如果沒有資料則不渲染
-  if (!resultData || resultData.status !== 'optimal') return null;
+  if (!resultData || (resultData.status !== 'optimal' && resultData.status !== 'optimal_with_violation')) return null;
 
-  const { totals, legs, ordered_attraction_names } = resultData;
+  const { totals, legs, ordered_attraction_names, constraints } = resultData;
 
   // 輔助函式：將分鐘數轉為 "X 小時 Y 分"
   const formatTime = (mins) => {
@@ -46,6 +46,18 @@ export default function TripResult({ resultData }) {
   return (
     <div className="max-w-3xl mx-auto p-6 bg-white rounded-xl shadow-lg">
       <h2 className="text-2xl font-bold text-gray-800 mb-6">最佳行程排定結果</h2>
+
+      {/* 如果違反時間或預算限制，顯示警告 */}
+      {constraints && !constraints.feasible && (
+        <div className="mb-6 p-4 bg-red-50 rounded-lg border border-red-200">
+          <h3 className="text-md font-bold text-red-800 mb-1">⚠️ 行程限制提醒</h3>
+          <p className="text-sm text-red-700">
+            您設定的時間或預算可能不足以跑完所有行程！
+            {constraints.binding.includes('time') && ` (目前排定需 ${Math.round(totals.total_time_min)} 分鐘，超過設定的 ${constraints.time_budget_min} 分鐘)`}
+            {constraints.binding.includes('budget') && ` (目前排定需 ${totals.total_fare_yen} 日圓，超過預算的 ${constraints.budget_yen} 日圓)`}
+          </p>
+        </div>
+      )}
 
       {resultData.reasoning && (
         <div className="mb-8 p-5 bg-yellow-50 rounded-lg border border-yellow-200">
